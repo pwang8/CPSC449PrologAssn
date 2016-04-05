@@ -73,20 +73,38 @@ hasParent(pelecanidae, pelecaniformes).
 hasParent(ardeidae, pelecaniformes).
 hasParent(threskiornithdae, pelecaniformes).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+%hasCommonName, need to implement compound names
+hasCommonName(pelecanus,pelican).
+hasCommonName(erythrorhynchos,americanWhitePelican).
+hasCommonName(occidentalis,brownPelican).	
+hasCommonName(botaurus,bittern).
+hasCommonName(lentiginosus,americanBittern).
+hasCommonName(ixobrychus,bittern).
+hasCommonName(exilis,leastBittern).
+hasCommonName(ardea,heron).
+hasCommonName(herodias,greatBlueHeron).
+hasCommonName(alba,greatEgret).
+hasCommonName(egretta,heron).
+hasCommonName(egretta,egret).
+hasCommonName(thulaegretta,snowyEgret).
+hasCommonName(caerulea,littleBlueHeron).
+hasCommonName(tricolor,tricoloredHeron).
+hasCommonName(rufescens,reddishEgret).
+hasCommonName(bubulcus,egret).
+hasCommonName(ibis,cattleEgret).
+hasCommonName(butorides,heron).
+hasCommonName(virescens,greenHeron).
+hasCommonName(nycticorax,nightHeron).
+hasCommonName(nycticorax,blackCrownedNightHeron).
+hasCommonName(nyctanassa,nightHeron).
+hasCommonName(violacea,yellowCrownedNightHeron).
+hasCommonName(eudocimus,ibis).
+hasCommonName(albus,whiteIbis).
+hasCommonName(plegadis,ibis).
+hasCommonName(falcinellus,glossyIbis).
+hasCommonName(chihi,whiteFacedIbis).
+hasCommonName(platalea,spoonbill).
+hasCommonName(ajaja,roseateSpoonBill).
 
 
 
