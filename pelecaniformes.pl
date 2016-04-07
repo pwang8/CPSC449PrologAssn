@@ -106,9 +106,22 @@ hasCommonName(platalea,spoonbill).
 hasCommonName(ajaja,roseateSpoonBill).
 
 hasCommonName(N,C) :- atom_concat(W, X, N), atom_concat(Z, '_' , W), hasCommonName(X, C), hasParent(X, Z).
+
 hasCommonName(G, S, C) :- hasParent(S,G) , hasCommonName(S,C), species(S), genus(G).
 
 hasSciName(C, N) :- hasCommonName(N, C).
 
 hasCompoundName(G,S,N) :- genus(G), species(S), hasParent(S,G), atom_concat(X, S, N), atom_concat(G, '_', X).
+
+isaStrict(A, A) :- 	order(A);
+    				family(A);
+    				genus(A);
+    				hasCompoundName(_,_,A).
+isaStrict(A, B) :-  hasParent(A,B), \+(species(A));
+					hasParent(A,X), isaStrict(X,B), \+(species(A)).
+isaStrict(A, B) :-  hasCompoundName(_,S,A), hasParent(S,B);
+    				hasCompoundName(G,_,A), isaStrict(G,B).
+
+
+
 
