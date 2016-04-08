@@ -105,13 +105,20 @@ hasCommonName(chihi,whiteFacedIbis).
 hasCommonName(platalea,spoonbill).
 hasCommonName(ajaja,roseateSpoonBill).
 
-hasCommonName(N,C) :- atom_concat(Z, '_' , W), atom_concat(W, X, N), hasCommonName(X, C), hasParent(X, Z).
+hasCommonName(N,C) :- atom_concat(W, X, N),
+                      atom_concat(Z, '_' , W),
+                      hasCommonName(X, C), 
+                      hasParent(X, Z).
 
-hasCommonName(G, S, C) :- hasParent(S,G) , hasCommonName(S,C), species(S), genus(G).
+hasCommonName(G, S, C) :- 	hasParent(S,G),
+    						hasCommonName(S,C),
+    						species(S), genus(G).
 
 hasSciName(C, N) :- hasCommonName(N, C).
 
-hasCompoundName(G,S,N) :- atom_concat(G, '_', X), atom_concat(X, S, N), genus(G), species(S), hasParent(S,G).
+hasCompoundName(G,S,N) :- 	atom_concat(G, '_', X),
+    						atom_concat(X, S, N),
+    						genus(G), species(S), hasParent(S,G).
 
 isaStrict(A, A) :- 	order(A);
     				family(A);
@@ -131,9 +138,11 @@ isa(A,B) :- \+(hasCommonName(_,A)), hasCommonName(M,B),
 isa(A,B) :- \+(hasCommonName(_,A)), \+(hasCommonName(_,B)),
     		isaStrict(A,B).
     		
-    
-    
-    
+
+synonym(A,B) :- hasCommonName(B,A), hasCommonName(B,_), A\=B.
+synonym(A,B) :- hasCommonName(A,_), hasCommonName(A,B), A\=B.
+synonym(A,B) :- hasCommonName(X,A), hasCommonName(X,B), A\=B.
+
     
     
     
