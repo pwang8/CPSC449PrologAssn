@@ -142,6 +142,38 @@ isa(A,B) :- \+(hasCommonName(_,A)), \+(hasCommonName(_,B)),
 synonym(A,B) :- hasCommonName(B,A), hasCommonName(B,_), A\=B.
 synonym(A,B) :- hasCommonName(A,_), hasCommonName(A,B), A\=B.
 synonym(A,B) :- hasCommonName(X,A), hasCommonName(X,B), A\=B.
+%RangesTo
+rangesTo(A,P) :- atom(A) -> range(A,P).
+rangesTo(A,P) :- var(A) -> hasCompoundName(_,_,A), range(A,P).
+range(pelecanus_erythrorhynchos, canada).
+range(pelecanus_erythrorhynchos, alberta).
+range(botaurus_lentiginosus, canada).
+range(botaurus_lentiginosus, alberta).
+range(ixobrychus_exilis, canada).
+range(ardea_herodias, canada).
+range(ardea_herodias, alberta).
+range(ardea_alba, canada).
+range(bubulcus_ibis, canada).
+range(butorides_virescens, canada).
+range(nycticorax_nycticorax, canada).
+range(nycticorax_nycticorax, alberta).
+range(pelecaniformes, canada).
+range(pelecaniformes, alberta).
+range(pelecanus, canada).
+range(pelecanus, alberta).
+range(pelecanidae, canada).
+range(pelecanidae, alberta).
+range(botaurus, canada).
+range(botaurus, alberta).
+range(ardeidae, canada).
+range(ardeidae, alberta).
+range(ixobrychus, canada).
+range(ardea, canada).
+range(ardea, alberta).
+range(bubulcus, canada).
+range(butorides, canada).
+range(nycticorax, canada).
+range(nycticorax, alberta).
 
 %Habitat
 habitat(pelecanus_erythrorhynchos, lakePond).
