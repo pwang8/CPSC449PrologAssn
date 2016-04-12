@@ -74,36 +74,36 @@ hasParent(ardeidae, pelecaniformes).
 hasParent(threskiornithdae, pelecaniformes).
 
 hasCommonName(pelecanus,pelican).
-hasCommonName(erythrorhynchos,americanWhitePelican).
-hasCommonName(occidentalis,brownPelican).	
+hasCommonName(pelecanus_erythrorhynchos,americanWhitePelican).
+hasCommonName(pelecanus_occidentalis,brownPelican).	
 hasCommonName(botaurus,bittern).
-hasCommonName(lentiginosus,americanBittern).
+hasCommonName(botaurus_lentiginosus,americanBittern).
 hasCommonName(ixobrychus,bittern).
-hasCommonName(exilis,leastBittern).
+hasCommonName(ixobrychus_exilis,leastBittern).
 hasCommonName(ardea,heron).
-hasCommonName(herodias,greatBlueHeron).
-hasCommonName(alba,greatEgret).
+hasCommonName(ardea_herodias,greatBlueHeron).
+hasCommonName(ardea_alba,greatEgret).
 hasCommonName(egretta,heron).
 hasCommonName(egretta,egret).
-hasCommonName(thula,snowyEgret).
-hasCommonName(caerulea,littleBlueHeron).
-hasCommonName(tricolor,tricoloredHeron).
-hasCommonName(rufescens,reddishEgret).
+hasCommonName(egretta_thula,snowyEgret).
+hasCommonName(egretta_caerulea,littleBlueHeron).
+hasCommonName(egretta_tricolor,tricoloredHeron).
+hasCommonName(egretta_rufescens,reddishEgret).
 hasCommonName(bubulcus,egret).
-hasCommonName(ibis,cattleEgret).
+hasCommonName(bubulcus_ibis,cattleEgret).
 hasCommonName(butorides,heron).
-hasCommonName(virescens,greenHeron).
+hasCommonName(butorides_virescens,greenHeron).
 hasCommonName(nycticorax,nightHeron).
-hasCommonName(nycticorax,blackCrownedNightHeron).
+hasCommonName(nycticorax_nycticorax,blackCrownedNightHeron).
 hasCommonName(nyctanassa,nightHeron).
-hasCommonName(violacea,yellowCrownedNightHeron).
+hasCommonName(nyctanassa_violacea,yellowCrownedNightHeron).
 hasCommonName(eudocimus,ibis).
-hasCommonName(albus,whiteIbis).
+hasCommonName(eudocimus_albus,whiteIbis).
 hasCommonName(plegadis,ibis).
-hasCommonName(falcinellus,glossyIbis).
-hasCommonName(chihi,whiteFacedIbis).
+hasCommonName(plegadis_falcinellus,glossyIbis).
+hasCommonName(plegadis_chihi,whiteFacedIbis).
 hasCommonName(platalea,spoonbill).
-hasCommonName(ajaja,roseateSpoonBill).
+hasCommonName(platalea_ajaja,roseateSpoonBill).
 
 hasCommonName(N,C) :- atom_concat(W, X, N),
                       atom_concat(Z, '_' , W),
@@ -372,8 +372,3 @@ conservation(ardeidae, lc).
 conservation(ardeidae, nt).
 conservation(threskiornithdae, lc).
 conservation(pelecaniformes, lc).
-
-
-    
-    
-    
