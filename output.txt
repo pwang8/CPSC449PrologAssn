@@ -1,22 +1,23 @@
-CPSC 449 W16 Prolog test program, version 5.
+Prolog testing harness version 7
+CPSC 449 Prolog Assignment: Pelecaniformes version 2 (Prolog testing harness version 7).
 ---------------------------------------------------------------
-Running test 'order(pelecaniformes). [_'...
+  1. Running test 'order(pelecaniformes). true'...
   Executing: C:\GNU-Prolog\bin\gprolog.exe --c pelecaniformes.pl
   
   List = [_]
   
   yes
   | ?-
-  Test 'order(pelecaniformes). [_': Success
+  Test 'order(pelecaniformes). true': Success
 ---------------------------------------------------------------
-Running test 'order(pelecanidae). []'...
+  2. Running test 'order(pelecanidae). false'...
   List = []
   
   yes
   | ?-
-  Test 'order(pelecanidae). []': Success
+  Test 'order(pelecanidae). false': Success
 ---------------------------------------------------------------
-Running test 'order(X).'...
+  3. Running test 'order(X).'...
   setof(X,order(X),L).
   L = [pelecaniformes]
   
@@ -24,35 +25,35 @@ Running test 'order(X).'...
   | ?-
   Test 'order(X).': Success
 ---------------------------------------------------------------
-Running test 'family(pelecanidae). [_'...
+  4. Running test 'family(pelecanidae). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'family(pelecanidae). [_': Success
+  Test 'family(pelecanidae). true': Success
 ---------------------------------------------------------------
-Running test 'family(ardeidae). [_'...
+  5. Running test 'family(ardeidae). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'family(ardeidae). [_': Success
+  Test 'family(ardeidae). true': Success
 ---------------------------------------------------------------
-Running test 'family(threskiornithdae). [_'...
+  6. Running test 'family(threskiornithdae). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'family(threskiornithdae). [_': Success
+  Test 'family(threskiornithdae). true': Success
 ---------------------------------------------------------------
-Running test 'family(pelecaniformes). is an order'...
+  7. Running test 'family(pelecaniformes). is an order'...
   List = []
   
   yes
   | ?-
   Test 'family(pelecaniformes). is an order': Success
 ---------------------------------------------------------------
-Running test 'family(X).'...
+  8. Running test 'family(X).'...
   setof(X,family(X),L).
   L = [ardeidae,pelecanidae,threskiornithdae]
   
@@ -60,35 +61,35 @@ Running test 'family(X).'...
   | ?-
   Test 'family(X).': Success
 ---------------------------------------------------------------
-Running test 'genus(botaurus). [_'...
+  9. Running test 'genus(botaurus). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'genus(botaurus). [_': Success
+  Test 'genus(botaurus). true': Success
 ---------------------------------------------------------------
-Running test 'genus(ardea). [_'...
+ 10. Running test 'genus(ardea). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'genus(ardea). [_': Success
+  Test 'genus(ardea). true': Success
 ---------------------------------------------------------------
-Running test 'genus(nycticorax). is both a genus and a species'...
+ 11. Running test 'genus(nycticorax). is both a genus and a species'...
   List = [_]
   
   yes
   | ?-
   Test 'genus(nycticorax). is both a genus and a species': Success
 ---------------------------------------------------------------
-Running test 'genus(erythrorhynchos). is a species'...
+ 12. Running test 'genus(erythrorhynchos). is a species'...
   List = []
   
   yes
   | ?-
   Test 'genus(erythrorhynchos). is a species': Success
 ---------------------------------------------------------------
-Running test 'genus(X).'...
+ 13. Running test 'genus(X).'...
   setof(X,genus(X),L).
   L = [ardea,botaurus,bubulcus,butorides,egretta,eudocimus,ixobrychus,nyctanassa,nycticorax,pelecanus,platalea,plegadis]
   
@@ -96,35 +97,35 @@ Running test 'genus(X).'...
   | ?-
   Test 'genus(X).': Success
 ---------------------------------------------------------------
-Running test 'species(occidentalis). [_'...
+ 14. Running test 'species(occidentalis). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'species(occidentalis). [_': Success
+  Test 'species(occidentalis). true': Success
 ---------------------------------------------------------------
-Running test 'species(thula). [_'...
+ 15. Running test 'species(thula). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'species(thula). [_': Success
+  Test 'species(thula). true': Success
 ---------------------------------------------------------------
-Running test 'species(nycticorax). is both a genus and a species'...
+ 16. Running test 'species(nycticorax). is both a genus and a species'...
   List = [_]
   
   yes
   | ?-
   Test 'species(nycticorax). is both a genus and a species': Success
 ---------------------------------------------------------------
-Running test 'species(plegadis). is a genus'...
+ 17. Running test 'species(plegadis). is a genus'...
   List = []
   
   yes
   | ?-
   Test 'species(plegadis). is a genus': Success
 ---------------------------------------------------------------
-Running test 'species(X).'...
+ 18. Running test 'species(X).'...
   setof(X,species(X),L).
   L = [ajaja,alba,albus,caerulea,chihi,erythrorhynchos,exilis,falcinellus,herodias,ibis,lentiginosus,nycticorax,occidentalis,rufescens,thula,tricolor,violacea,virescens]
   
@@ -132,140 +133,199 @@ Running test 'species(X).'...
   | ?-
   Test 'species(X).': Success
 ---------------------------------------------------------------
-Running test 'hasParent(plegadis_falcinellus,plegadis). cspecies/genus'...
+ 19. Running test 'hasParent(plegadis_falcinellus,plegadis). cspecies/genus'...
   List = []
   
   yes
   | ?-
-  Test 'hasParent(plegadis_falcinellus,plegadis). cspecies/genus': Incorrect output:
-          Expected expression to succeed.
+  Test 'hasParent(plegadis_falcinellus,plegadis). cspecies/genus': Success
 ---------------------------------------------------------------
-Running test 'hasParent(falcinellus,plegadis). species/genus'...
+ 20. Running test 'hasParent(falcinellus,plegadis). species/genus'...
   List = [_]
   
   yes
   | ?-
-  Test 'hasParent(falcinellus,plegadis). species/genus': Incorrect output:
-          Expected expression to fail.
+  Test 'hasParent(falcinellus,plegadis). species/genus': Success
 ---------------------------------------------------------------
-Running test 'hasParent(nycticorax,ardeidae). genus/family'...
+ 21. Running test 'hasParent(nycticorax,ardeidae). genus/family'...
   List = [_]
   
   yes
   | ?-
   Test 'hasParent(nycticorax,ardeidae). genus/family': Success
 ---------------------------------------------------------------
-Running test 'hasParent(threskiornithdae,pelecaniformes). family/order'...
+ 22. Running test 'hasParent(threskiornithdae,pelecaniformes). family/order'...
   List = [_]
   
   yes
   | ?-
   Test 'hasParent(threskiornithdae,pelecaniformes). family/order': Success
 ---------------------------------------------------------------
-Running test 'hasParent(plegadis_falcinellus,ardeidae). cspecies/family'...
+ 23. Running test 'hasParent(falcinellus,ardeidae). species/family'...
   List = []
   
   yes
   | ?-
-  Test 'hasParent(plegadis_falcinellus,ardeidae). cspecies/family': Success
+  Test 'hasParent(falcinellus,ardeidae). species/family': Success
 ---------------------------------------------------------------
-Running test 'hasParent(nycticorax,pelecaniformes). genus/order'...
+ 24. Running test 'hasParent(nycticorax,pelecaniformes). genus/order'...
   List = []
   
   yes
   | ?-
   Test 'hasParent(nycticorax,pelecaniformes). genus/order': Success
 ---------------------------------------------------------------
-Running test 'hasParent(X,egretta).'...
+ 25. Running test 'hasParent(X,egretta).'...
   setof(X,hasParent(X,egretta),L).
   L = [caerulea,rufescens,thula,tricolor]
   
   yes
   | ?-
-  Test 'hasParent(X,egretta).': Incorrect output:
-          Expected bag of [egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor], but got [caerulea,rufescens,thula,tricolor]
+  Test 'hasParent(X,egretta).': Success
 ---------------------------------------------------------------
-Running test 'hasParent(egretta,ardeidae). genus/family'...
+ 26. Running test 'hasParent(egretta,ardeidae). genus/family'...
   List = [_]
   
   yes
   | ?-
   Test 'hasParent(egretta,ardeidae). genus/family': Success
 ---------------------------------------------------------------
-Running test 'hasParent(egretta_caerulea,X).'...
-  setof(X,hasParent(egretta_caerulea,X),L).
-  no
+ 27. Running test 'hasParent(caerulea,X).'...
+  setof(X,hasParent(caerulea,X),L).
+  L = [egretta]
+  
+  yes
   | ?-
-  Test 'hasParent(egretta_caerulea,X).': Incorrect output:
-          Expected starts-with of L = [
+  Test 'hasParent(caerulea,X).': Success
 ---------------------------------------------------------------
-Running test 'hasParent(X,Y).'...
+ 28. Running test 'hasParent(X,Y).'...
   setof([X,Y],hasParent(X,Y),L).
   L = [[ajaja,platalea],[alba,ardea],[albus,eudocimus],[ardea,ardeidae],[ardeidae,pelecaniformes],[botaurus,ardeidae],[bubulcus,ardeidae],[butorides,ardeidae],[caerulea,egretta],[chihi,plegadis],[egretta,ardeidae],[erythrorhynchos,pelecanus],[eudocimus,threskiornithdae],[exilis,ixobrychus],[falcinellus,plegadis],[herodias,ardea],[ibis,bubulcus],[ixobrychus,ardeidae],[lentiginosus,botaurus],[nyctanassa,ardeidae],[nycticorax,ardeidae],[nycticorax,nycticorax],[occidentalis,pelecanus],[pelecanidae,pelecaniformes],[pelecanus,pelecanidae],[platalea,threskiornithdae],[plegadis,threskiornithdae],[rufescens,egretta],[threskiornithdae,pelecaniformes],[thula,egretta],[tricolor,egretta],[violacea,nyctanassa],[virescens,butorides]]
   
   yes
   | ?-
-  Test 'hasParent(X,Y).': Incorrect output:
-          Expected bag of [[ardea,ardeidae],[ardea_alba,ardea],[ardea_herodias,ardea],[ardeidae,pelecaniformes],[botaurus,ardeidae],[botaurus_lentiginosus,botaurus],[bubulcus,ardeidae],[bubulcus_ibis,bubulcus],[butorides,ardeidae],[butorides_virescens,butorides],[egretta,ardeidae],[egretta_caerulea,egretta],[egretta_rufescens,egretta],[egretta_thula,egretta],[egretta_tricolor,egretta],[eudocimus,threskiornithdae],[eudocimus_albus,eudocimus],[ixobrychus,ardeidae],[ixobrychus_exilis,ixobrychus],[nyctanassa,ardeidae],[nyctanassa_violacea,nyctanassa],[nycticorax,ardeidae],[nycticorax_nycticorax,nycticorax],[pelecanidae,pelecaniformes],[pelecanus,pelecanidae],[pelecanus_erythrorhynchos,pelecanus],[pelecanus_occidentalis,pelecanus],[platalea,threskiornithdae],[platalea_ajaja,platalea],[plegadis,threskiornithdae],[plegadis_chihi,plegadis],[plegadis_falcinellus,plegadis],[threskiornithdae,pelecaniformes]], but got [[ajaja,platalea],[alba,ardea],[albus,eudocimus],[ardea,ardeidae],[ardeidae,pelecaniformes],[botaurus,ardeidae],[bubulcus,ardeidae],[butorides,ardeidae],[caerulea,egretta],[chihi,plegadis],[egretta,ardeidae],[erythrorhynchos,pelecanus],[eudocimus,threskiornithdae],[exilis,ixobrychus],[falcinellus,plegadis],[herodias,ardea],[ibis,bubulcus],[ixobrychus,ardeidae],[lentiginosus,botaurus],[nyctanassa,ardeidae],[nycticorax,ardeidae],[nycticorax,nycticorax],[occidentalis,pelecanus],[pelecanidae,pelecaniformes],[pelecanus,pelecanidae],[platalea,threskiornithdae],[plegadis,threskiornithdae],[rufescens,egretta],[threskiornithdae,pelecaniformes],[thula,egretta],[tricolor,egretta],[violacea,nyctanassa],[virescens,butorides]]
+  Test 'hasParent(X,Y).': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(pelecanus,pelican). order'...
+ 29. Running test 'hasParent2(plegadis_falcinellus,plegadis). cspecies/genus'...
+  uncaught exception: error(existence_error(procedure,hasParent2/2),findall/3)
+  | ?-
+  Test 'hasParent2(plegadis_falcinellus,plegadis). cspecies/genus': Unimplemented term:
+          Expected expression to succeed.
+---------------------------------------------------------------
+ 30. Running test 'hasParent2(falcinellus,plegadis). species/genus'...
+  uncaught exception: error(existence_error(procedure,hasParent2/2),findall/3)
+  | ?-
+  Test 'hasParent2(falcinellus,plegadis). species/genus': Unimplemented term:
+          Expected expression to fail.
+---------------------------------------------------------------
+ 31. Running test 'hasParent2(nycticorax,ardeidae). genus/family'...
+  uncaught exception: error(existence_error(procedure,hasParent2/2),findall/3)
+  | ?-
+  Test 'hasParent2(nycticorax,ardeidae). genus/family': Unimplemented term:
+          Expected expression to succeed.
+---------------------------------------------------------------
+ 32. Running test 'hasParent2(threskiornithdae,pelecaniformes). family/order'...
+  uncaught exception: error(existence_error(procedure,hasParent2/2),findall/3)
+  | ?-
+  Test 'hasParent2(threskiornithdae,pelecaniformes). family/order': Unimplemented term:
+          Expected expression to succeed.
+---------------------------------------------------------------
+ 33. Running test 'hasParent2(plegadis_falcinellus,ardeidae). cspecies/family'...
+  uncaught exception: error(existence_error(procedure,hasParent2/2),findall/3)
+  | ?-
+  Test 'hasParent2(plegadis_falcinellus,ardeidae). cspecies/family': Unimplemented term:
+          Expected expression to fail.
+---------------------------------------------------------------
+ 34. Running test 'hasParent2(nycticorax,pelecaniformes). genus/order'...
+  uncaught exception: error(existence_error(procedure,hasParent2/2),findall/3)
+  | ?-
+  Test 'hasParent2(nycticorax,pelecaniformes). genus/order': Unimplemented term:
+          Expected expression to fail.
+---------------------------------------------------------------
+ 35. Running test 'hasParent2(X,egretta).'...
+  setof(X,hasParent2(X,egretta),L).
+  uncaught exception: error(existence_error(procedure,hasParent2/2),setof/3)
+  | ?-
+  Test 'hasParent2(X,egretta).': Unimplemented term:
+          Expected starts-with of L = [
+---------------------------------------------------------------
+ 36. Running test 'hasParent2(egretta,ardeidae). genus/family'...
+  uncaught exception: error(existence_error(procedure,hasParent2/2),findall/3)
+  | ?-
+  Test 'hasParent2(egretta,ardeidae). genus/family': Unimplemented term:
+          Expected expression to succeed.
+---------------------------------------------------------------
+ 37. Running test 'hasParent2(egretta_caerulea,X).'...
+  setof(X,hasParent2(egretta_caerulea,X),L).
+  uncaught exception: error(existence_error(procedure,hasParent2/2),setof/3)
+  | ?-
+  Test 'hasParent2(egretta_caerulea,X).': Unimplemented term:
+          Expected starts-with of L = [
+---------------------------------------------------------------
+ 38. Running test 'hasParent2(X,Y).'...
+  setof([X,Y],hasParent2(X,Y),L).
+  uncaught exception: error(existence_error(procedure,hasParent2/2),setof/3)
+  | ?-
+  Test 'hasParent2(X,Y).': Unimplemented term:
+          Expected starts-with of L = [
+---------------------------------------------------------------
+ 39. Running test 'hasCommonName(pelecanus,pelican). order'...
   List = [_]
   
   yes
   | ?-
   Test 'hasCommonName(pelecanus,pelican). order': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(ardea,heron). genus'...
+ 40. Running test 'hasCommonName(ardea,heron). genus'...
   List = [_]
   
   yes
   | ?-
   Test 'hasCommonName(ardea,heron). genus': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(nycticorax,nightHeron). genus'...
+ 41. Running test 'hasCommonName(nycticorax,nightHeron). genus'...
   List = [_]
   
   yes
   | ?-
   Test 'hasCommonName(nycticorax,nightHeron). genus': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(nyctanassa,nightHeron). genus (also above)'...
+ 42. Running test 'hasCommonName(nyctanassa,nightHeron). genus (also above)'...
   List = [_]
   
   yes
   | ?-
   Test 'hasCommonName(nyctanassa,nightHeron). genus (also above)': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(pelecanus_erythrorhynchos,americanWhitePelican). cspeces'...
+ 43. Running test 'hasCommonName(pelecanus_erythrorhynchos,americanWhitePelican). cspeces'...
   List = [_]
   
   yes
   | ?-
   Test 'hasCommonName(pelecanus_erythrorhynchos,americanWhitePelican). cspeces': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(erythrorhynchos,americanWhitePelican). raw speces'...
-  List = [_]
+ 44. Running test 'hasCommonName(erythrorhynchos,americanWhitePelican). raw speces'...
+  List = []
   
   yes
   | ?-
-  Test 'hasCommonName(erythrorhynchos,americanWhitePelican). raw speces': Incorrect output:
-          Expected expression to fail.
+  Test 'hasCommonName(erythrorhynchos,americanWhitePelican). raw speces': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(pelecanus_erythrorhynchos,brownPelican). cspeces/wrongName'...
+ 45. Running test 'hasCommonName(pelecanus_erythrorhynchos,brownPelican). cspeces/wrongName'...
   List = []
   
   yes
   | ?-
   Test 'hasCommonName(pelecanus_erythrorhynchos,brownPelican). cspeces/wrongName': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(butorides_virescens,greenHeron). cspecies'...
+ 46. Running test 'hasCommonName(butorides_virescens,greenHeron). cspecies'...
   List = [_]
   
   yes
   | ?-
   Test 'hasCommonName(butorides_virescens,greenHeron). cspecies': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(nyctanassa_violacea,X). cspecies/'...
+ 47. Running test 'hasCommonName(nyctanassa_violacea,X). cspecies/'...
   setof(X,hasCommonName(nyctanassa_violacea,X),L).
   L = [yellowCrownedNightHeron]
   
@@ -273,56 +333,50 @@ Running test 'hasCommonName(nyctanassa_violacea,X). cspecies/'...
   | ?-
   Test 'hasCommonName(nyctanassa_violacea,X). cspecies/': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(X,roeateSpoonbill). /commonName'...
-  setof(X,hasCommonName(X,roeateSpoonbill),L).
-  uncaught exception: error(instantiation_error,atom_concat/3)
+ 48. Running test 'hasCommonName(X,roseateSpoonbill). /commonName'...
+  setof(X,hasCommonName(X,roseateSpoonbill),L).
+  L = [platalea_ajaja]
+  
+  yes
   | ?-
-  Test 'hasCommonName(X,roeateSpoonbill). /commonName': Incorrect output:
-          Expected starts-with of L = [
+  Test 'hasCommonName(X,roseateSpoonbill). /commonName': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(X,Y). * /*'...
-  setof([X,Y],hasCommonName(X,Y),L).
-  uncaught exception: error(instantiation_error,atom_concat/3)
-  | ?-
-  Test 'hasCommonName(X,Y). * /*': Incorrect output:
-          Expected starts-with of L = [
----------------------------------------------------------------
-Running test 'hasCommonName(botaurus,lentiginosus,americanBittern). [_'...
+ 49. Running test 'hasCommonName(botaurus,lentiginosus,americanBittern). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'hasCommonName(botaurus,lentiginosus,americanBittern). [_': Success
+  Test 'hasCommonName(botaurus,lentiginosus,americanBittern). true': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(egretta,rufescens,reddishEgret). [_'...
+ 50. Running test 'hasCommonName(egretta,rufescens,reddishEgret). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'hasCommonName(egretta,rufescens,reddishEgret). [_': Success
+  Test 'hasCommonName(egretta,rufescens,reddishEgret). true': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(egretta,alba,reddishEgret). genus/species mismatch'...
+ 51. Running test 'hasCommonName(egretta,alba,reddishEgret). genus/species mismatch'...
   List = []
   
   yes
   | ?-
   Test 'hasCommonName(egretta,alba,reddishEgret). genus/species mismatch': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(egretta,rufescens,snowyEgret). wrong common name'...
+ 52. Running test 'hasCommonName(egretta,rufescens,snowyEgret). wrong common name'...
   List = []
   
   yes
   | ?-
   Test 'hasCommonName(egretta,rufescens,snowyEgret). wrong common name': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(nycticorax,nycticorax,blackCrownedNightHeron). [_'...
+ 53. Running test 'hasCommonName(nycticorax,nycticorax,blackCrownedNightHeron). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'hasCommonName(nycticorax,nycticorax,blackCrownedNightHeron). [_': Success
+  Test 'hasCommonName(nycticorax,nycticorax,blackCrownedNightHeron). true': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(botaurus,lentiginosus,X).'...
+ 54. Running test 'hasCommonName(botaurus,lentiginosus,X).'...
   setof(X,hasCommonName(botaurus,lentiginosus,X),L).
   L = [americanBittern]
   
@@ -330,7 +384,7 @@ Running test 'hasCommonName(botaurus,lentiginosus,X).'...
   | ?-
   Test 'hasCommonName(botaurus,lentiginosus,X).': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(egretta,rufescens,X).'...
+ 55. Running test 'hasCommonName(egretta,rufescens,X).'...
   setof(X,hasCommonName(egretta,rufescens,X),L).
   L = [reddishEgret]
   
@@ -338,16 +392,15 @@ Running test 'hasCommonName(egretta,rufescens,X).'...
   | ?-
   Test 'hasCommonName(egretta,rufescens,X).': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(nycticorax,nycticorax,X).'...
+ 56. Running test 'hasCommonName(nycticorax,nycticorax,X).'...
   setof(X,hasCommonName(nycticorax,nycticorax,X),L).
-  L = [blackCrownedNightHeron,nightHeron]
+  L = [blackCrownedNightHeron]
   
   yes
   | ?-
-  Test 'hasCommonName(nycticorax,nycticorax,X).': Incorrect output:
-          Expected bag of [blackCrownedNightHeron], but got [blackCrownedNightHeron,nightHeron]
+  Test 'hasCommonName(nycticorax,nycticorax,X).': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(X,Y,americanBittern).'...
+ 57. Running test 'hasCommonName(X,Y,americanBittern).'...
   setof([X,Y],hasCommonName(X,Y,americanBittern),L).
   L = [[botaurus,lentiginosus]]
   
@@ -355,7 +408,7 @@ Running test 'hasCommonName(X,Y,americanBittern).'...
   | ?-
   Test 'hasCommonName(X,Y,americanBittern).': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(X,Y,reddishEgret).'...
+ 58. Running test 'hasCommonName(X,Y,reddishEgret).'...
   setof([X,Y],hasCommonName(X,Y,reddishEgret),L).
   L = [[egretta,rufescens]]
   
@@ -363,7 +416,7 @@ Running test 'hasCommonName(X,Y,reddishEgret).'...
   | ?-
   Test 'hasCommonName(X,Y,reddishEgret).': Success
 ---------------------------------------------------------------
-Running test 'hasCommonName(X,Y,blackCrownedNightHeron).'...
+ 59. Running test 'hasCommonName(X,Y,blackCrownedNightHeron).'...
   setof([X,Y],hasCommonName(X,Y,blackCrownedNightHeron),L).
   L = [[nycticorax,nycticorax]]
   
@@ -371,79 +424,80 @@ Running test 'hasCommonName(X,Y,blackCrownedNightHeron).'...
   | ?-
   Test 'hasCommonName(X,Y,blackCrownedNightHeron).': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(greatBlueHeron,ardea_herodias). cspeces'...
+ 60. Running test 'hasSciName(greatBlueHeron,ardea_herodias). cspeces'...
   List = [_]
   
   yes
   | ?-
   Test 'hasSciName(greatBlueHeron,ardea_herodias). cspeces': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(snowyEgret,egretta_thula). cspeces'...
+ 61. Running test 'hasSciName(snowyEgret,egretta_thula). cspeces'...
   List = [_]
   
   yes
   | ?-
   Test 'hasSciName(snowyEgret,egretta_thula). cspeces': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(snowyEgret,thula). raw speces'...
-  List = [_]
+ 62. Running test 'hasSciName(snowyEgret,thula). raw speces'...
+  List = []
   
   yes
   | ?-
-  Test 'hasSciName(snowyEgret,thula). raw speces': Incorrect output:
-          Expected expression to fail.
+  Test 'hasSciName(snowyEgret,thula). raw speces': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(cattleEgret,bubulcus_ibis). cspeces'...
+ 63. Running test 'hasSciName(cattleEgret,bubulcus_ibis). cspeces'...
   List = [_]
   
   yes
   | ?-
   Test 'hasSciName(cattleEgret,bubulcus_ibis). cspeces': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(cattleEgret,ibis). raw speces'...
-  List = [_]
+ 64. Running test 'hasSciName(cattleEgret,ibis). raw speces'...
+  List = []
   
   yes
   | ?-
-  Test 'hasSciName(cattleEgret,ibis). raw speces': Incorrect output:
-          Expected expression to fail.
+  Test 'hasSciName(cattleEgret,ibis). raw speces': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(ibis,eudocimus). genus'...
+ 65. Running test 'hasSciName(ibis,eudocimus). genus'...
   List = [_]
   
   yes
   | ?-
   Test 'hasSciName(ibis,eudocimus). genus': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(ibis,plegadis). genus (same as above)'...
+ 66. Running test 'hasSciName(ibis,plegadis). genus (same as above)'...
   List = [_]
   
   yes
   | ?-
   Test 'hasSciName(ibis,plegadis). genus (same as above)': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(greatBlueHeron,X). cspecies/'...
+ 67. Running test 'hasSciName(greatBlueHeron,X). cspecies/'...
   setof(X,hasSciName(greatBlueHeron,X),L).
-  uncaught exception: error(instantiation_error,atom_concat/3)
+  L = [ardea_herodias]
+  
+  yes
   | ?-
-  Test 'hasSciName(greatBlueHeron,X). cspecies/': Incorrect output:
-          Expected starts-with of L = [
+  Test 'hasSciName(greatBlueHeron,X). cspecies/': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(snowyEgret,X). cspecies/'...
+ 68. Running test 'hasSciName(snowyEgret,X). cspecies/'...
   setof(X,hasSciName(snowyEgret,X),L).
-  uncaught exception: error(instantiation_error,atom_concat/3)
+  L = [egretta_thula]
+  
+  yes
   | ?-
-  Test 'hasSciName(snowyEgret,X). cspecies/': Incorrect output:
-          Expected starts-with of L = [
+  Test 'hasSciName(snowyEgret,X). cspecies/': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(cattleEgret,X). cspecies/'...
+ 69. Running test 'hasSciName(cattleEgret,X). cspecies/'...
   setof(X,hasSciName(cattleEgret,X),L).
-  uncaught exception: error(instantiation_error,atom_concat/3)
+  L = [bubulcus_ibis]
+  
+  yes
   | ?-
-  Test 'hasSciName(cattleEgret,X). cspecies/': Incorrect output:
-          Expected starts-with of L = [
+  Test 'hasSciName(cattleEgret,X). cspecies/': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(X,ardea_herodias). /cspecies'...
+ 70. Running test 'hasSciName(X,ardea_herodias). /cspecies'...
   setof(X,hasSciName(X,ardea_herodias),L).
   L = [greatBlueHeron]
   
@@ -451,7 +505,7 @@ Running test 'hasSciName(X,ardea_herodias). /cspecies'...
   | ?-
   Test 'hasSciName(X,ardea_herodias). /cspecies': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(X,egretta_thula). /cspecies'...
+ 71. Running test 'hasSciName(X,egretta_thula). /cspecies'...
   setof(X,hasSciName(X,egretta_thula),L).
   L = [snowyEgret]
   
@@ -459,7 +513,7 @@ Running test 'hasSciName(X,egretta_thula). /cspecies'...
   | ?-
   Test 'hasSciName(X,egretta_thula). /cspecies': Success
 ---------------------------------------------------------------
-Running test 'hasSciName(X,bubulcus_ibis). /cspecies'...
+ 72. Running test 'hasSciName(X,bubulcus_ibis). /cspecies'...
   setof(X,hasSciName(X,bubulcus_ibis),L).
   L = [cattleEgret]
   
@@ -467,1368 +521,1382 @@ Running test 'hasSciName(X,bubulcus_ibis). /cspecies'...
   | ?-
   Test 'hasSciName(X,bubulcus_ibis). /cspecies': Success
 ---------------------------------------------------------------
-Running test 'hasCompoundName(pelecanus,occidentalis,pelecanus_occidentalis). [_'...
+ 73. Running test 'hasCompoundName(pelecanus,occidentalis,pelecanus_occidentalis). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'hasCompoundName(pelecanus,occidentalis,pelecanus_occidentalis). [_': Success
+  Test 'hasCompoundName(pelecanus,occidentalis,pelecanus_occidentalis). true': Success
 ---------------------------------------------------------------
-Running test 'hasCompoundName(egretta,tricolor,egretta_tricolor). [_'...
+ 74. Running test 'hasCompoundName(egretta,tricolor,egretta_tricolor). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'hasCompoundName(egretta,tricolor,egretta_tricolor). [_': Success
+  Test 'hasCompoundName(egretta,tricolor,egretta_tricolor). true': Success
 ---------------------------------------------------------------
-Running test 'hasCompoundName(plegadis,chihi,plegadis_chihi). [_'...
+ 75. Running test 'hasCompoundName(plegadis,chihi,plegadis_chihi). true'...
   List = [_]
   
   yes
   | ?-
-  Test 'hasCompoundName(plegadis,chihi,plegadis_chihi). [_': Success
+  Test 'hasCompoundName(plegadis,chihi,plegadis_chihi). true': Success
 ---------------------------------------------------------------
-Running test 'hasCompoundName(plegadis,chihi,egretta_tricolor). wrong name'...
+ 76. Running test 'hasCompoundName(plegadis,chihi,egretta_tricolor). wrong name'...
   List = []
   
   yes
   | ?-
   Test 'hasCompoundName(plegadis,chihi,egretta_tricolor). wrong name': Success
 ---------------------------------------------------------------
-Running test 'hasCompoundName(pelecanus,occidentalis,X).'...
+ 77. Running test 'hasCompoundName(pelecanus,occidentalis,X).'...
   setof(X,hasCompoundName(pelecanus,occidentalis,X),L).
-  uncaught exception: error(instantiation_error,atom_concat/3)
+  L = [pelecanus_occidentalis]
+  
+  yes
   | ?-
-  Test 'hasCompoundName(pelecanus,occidentalis,X).': Incorrect output:
-          Expected starts-with of L = [
+  Test 'hasCompoundName(pelecanus,occidentalis,X).': Success
 ---------------------------------------------------------------
-Running test 'hasCompoundName(egretta,tricolor,X).'...
+ 78. Running test 'hasCompoundName(egretta,tricolor,X).'...
   setof(X,hasCompoundName(egretta,tricolor,X),L).
-  uncaught exception: error(instantiation_error,atom_concat/3)
+  L = [egretta_tricolor]
+  
+  yes
   | ?-
-  Test 'hasCompoundName(egretta,tricolor,X).': Incorrect output:
-          Expected starts-with of L = [
+  Test 'hasCompoundName(egretta,tricolor,X).': Success
 ---------------------------------------------------------------
-Running test 'hasCompoundName(plegadis,chihi,X).'...
+ 79. Running test 'hasCompoundName(plegadis,chihi,X).'...
   setof(X,hasCompoundName(plegadis,chihi,X),L).
+  L = [plegadis_chihi]
+  
+  yes
+  | ?-
+  Test 'hasCompoundName(plegadis,chihi,X).': Success
+---------------------------------------------------------------
+ 80. Running test 'hasCompoundName(X,Y,pelecanus_occidentalis).'...
+  setof([X,Y],hasCompoundName(X,Y,pelecanus_occidentalis),L).
   uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'hasCompoundName(plegadis,chihi,X).': Incorrect output:
+  Test 'hasCompoundName(X,Y,pelecanus_occidentalis).': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'hasCompoundName(X,Y,pelecanus_occidentalis).'...
-  setof([X,Y],hasCompoundName(X,Y,pelecanus_occidentalis),L).
-  L = [[pelecanus,occidentalis]]
-  
-  yes
-  | ?-
-  Test 'hasCompoundName(X,Y,pelecanus_occidentalis).': Success
----------------------------------------------------------------
-Running test 'hasCompoundName(X,Y,egretta_tricolor).'...
+ 81. Running test 'hasCompoundName(X,Y,egretta_tricolor).'...
   setof([X,Y],hasCompoundName(X,Y,egretta_tricolor),L).
-  L = [[egretta,tricolor]]
-  
-  yes
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'hasCompoundName(X,Y,egretta_tricolor).': Success
+  Test 'hasCompoundName(X,Y,egretta_tricolor).': Incorrect output:
+          Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'hasCompoundName(X,Y,plegadis_chihi).'...
+ 82. Running test 'hasCompoundName(X,Y,plegadis_chihi).'...
   setof([X,Y],hasCompoundName(X,Y,plegadis_chihi),L).
-  L = [[plegadis,chihi]]
-  
-  yes
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'hasCompoundName(X,Y,plegadis_chihi).': Success
----------------------------------------------------------------
-Running test 'synonym(plegadis,plegadis). equal'...
-  uncaught exception: error(existence_error(procedure,synonym/2),findall/3)
-  | ?-
-  Test 'synonym(plegadis,plegadis). equal': Unimplemented term:
-          Expected expression to fail.
----------------------------------------------------------------
-Running test 'synonym(glossyIbis,plegadis_falcinellus). common/cspecies'...
-  uncaught exception: error(existence_error(procedure,synonym/2),findall/3)
-  | ?-
-  Test 'synonym(glossyIbis,plegadis_falcinellus). common/cspecies': Unimplemented term:
-          Expected expression to succeed.
----------------------------------------------------------------
-Running test 'synonym(glossyIbis,alcinellus). common/rawSpecies'...
-  uncaught exception: error(existence_error(procedure,synonym/2),findall/3)
-  | ?-
-  Test 'synonym(glossyIbis,alcinellus). common/rawSpecies': Unimplemented term:
-          Expected expression to fail.
----------------------------------------------------------------
-Running test 'synonym(plegadis_falcinellus,glossyIbis). species/common'...
-  uncaught exception: error(existence_error(procedure,synonym/2),findall/3)
-  | ?-
-  Test 'synonym(plegadis_falcinellus,glossyIbis). species/common': Unimplemented term:
-          Expected expression to succeed.
----------------------------------------------------------------
-Running test 'synonym(falcinellus,glossyIbis). rawSpecies/common'...
-  uncaught exception: error(existence_error(procedure,synonym/2),findall/3)
-  | ?-
-  Test 'synonym(falcinellus,glossyIbis). rawSpecies/common': Unimplemented term:
-          Expected expression to fail.
----------------------------------------------------------------
-Running test 'synonym(glossyIbis,plegadis_falcinellus). common/compound'...
-  uncaught exception: error(existence_error(procedure,synonym/2),findall/3)
-  | ?-
-  Test 'synonym(glossyIbis,plegadis_falcinellus). common/compound': Unimplemented term:
-          Expected expression to succeed.
----------------------------------------------------------------
-Running test 'synonym(plegadis_falcinellus,glossyIbis). compound/common'...
-  uncaught exception: error(existence_error(procedure,synonym/2),findall/3)
-  | ?-
-  Test 'synonym(plegadis_falcinellus,glossyIbis). compound/common': Unimplemented term:
-          Expected expression to succeed.
----------------------------------------------------------------
-Running test 'synonym(bittern,ixobrychus). common/genus'...
-  uncaught exception: error(existence_error(procedure,synonym/2),findall/3)
-  | ?-
-  Test 'synonym(bittern,ixobrychus). common/genus': Unimplemented term:
-          Expected expression to succeed.
----------------------------------------------------------------
-Running test 'synonym(ixobrychus,botaurus). genus/genus with same common name'...
-  uncaught exception: error(existence_error(procedure,synonym/2),findall/3)
-  | ?-
-  Test 'synonym(ixobrychus,botaurus). genus/genus with same common name': Unimplemented term:
-          Expected expression to fail.
----------------------------------------------------------------
-Running test 'synonym(bittern,botaurus). common/genus (same as above)'...
-  uncaught exception: error(existence_error(procedure,synonym/2),findall/3)
-  | ?-
-  Test 'synonym(bittern,botaurus). common/genus (same as above)': Unimplemented term:
-          Expected expression to succeed.
----------------------------------------------------------------
-Running test 'synonym(heron,egrit). both are names for egretta'...
-  uncaught exception: error(existence_error(procedure,synonym/2),findall/3)
-  | ?-
-  Test 'synonym(heron,egrit). both are names for egretta': Unimplemented term:
-          Expected expression to fail.
----------------------------------------------------------------
-Running test 'synonym(greenHeron,X). common/'...
-  setof(X,synonym(greenHeron,X),L).
-  uncaught exception: error(existence_error(procedure,synonym/2),setof/3)
-  | ?-
-  Test 'synonym(greenHeron,X). common/': Unimplemented term:
+  Test 'hasCompoundName(X,Y,plegadis_chihi).': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'synonym(X,greenHeron). /common'...
-  setof(X,synonym(X,greenHeron),L).
-  uncaught exception: error(existence_error(procedure,synonym/2),setof/3)
-  | ?-
-  Test 'synonym(X,greenHeron). /common': Unimplemented term:
-          Expected starts-with of L = [
----------------------------------------------------------------
-Running test 'synonym(butorides_virescens,X). cspecies/'...
-  setof(X,synonym(butorides_virescens,X),L).
-  uncaught exception: error(existence_error(procedure,synonym/2),setof/3)
-  | ?-
-  Test 'synonym(butorides_virescens,X). cspecies/': Unimplemented term:
-          Expected starts-with of L = [
----------------------------------------------------------------
-Running test 'synonym(X,butorides_virescens). /cspecies'...
-  setof(X,synonym(X,butorides_virescens),L).
-  uncaught exception: error(existence_error(procedure,synonym/2),setof/3)
-  | ?-
-  Test 'synonym(X,butorides_virescens). /cspecies': Unimplemented term:
-          Expected starts-with of L = [
----------------------------------------------------------------
-Running test 'synonym(X,heron). /common that maps to 3 genera'...
-  setof(X,synonym(X,heron),L).
-  uncaught exception: error(existence_error(procedure,synonym/2),setof/3)
-  | ?-
-  Test 'synonym(X,heron). /common that maps to 3 genera': Unimplemented term:
-          Expected starts-with of L = [
----------------------------------------------------------------
-Running test 'synonym(heron,X). /common that maps to 3 genera'...
-  setof(X,synonym(heron,X),L).
-  uncaught exception: error(existence_error(procedure,synonym/2),setof/3)
-  | ?-
-  Test 'synonym(heron,X). /common that maps to 3 genera': Unimplemented term:
-          Expected starts-with of L = [
----------------------------------------------------------------
-Running test 'isaStrict(exilis,exilis). equal species'...
+ 83. Running test 'synonym(plegadis,plegadis). equal'...
   List = []
   
   yes
   | ?-
-  Test 'isaStrict(exilis,exilis). equal species': Incorrect output:
-          Expected expression to succeed.
+  Test 'synonym(plegadis,plegadis). equal': Success
 ---------------------------------------------------------------
-Running test 'isaStrict(ardeidae,ardeidae). equal families'...
+ 84. Running test 'synonym(glossyIbis,plegadis_falcinellus). common/cspecies'...
   List = [_]
   
   yes
   | ?-
-  Test 'isaStrict(ardeidae,ardeidae). equal families': Success
+  Test 'synonym(glossyIbis,plegadis_falcinellus). common/cspecies': Success
 ---------------------------------------------------------------
-Running test 'isaStrict(x,x). equal but unknown'...
+ 85. Running test 'synonym(glossyIbis,alcinellus). common/rawSpecies'...
   List = []
   
   yes
+  | ?-
+  Test 'synonym(glossyIbis,alcinellus). common/rawSpecies': Success
+---------------------------------------------------------------
+ 86. Running test 'synonym(plegadis_falcinellus,glossyIbis). species/common'...
+  List = [_]
+  
+  yes
+  | ?-
+  Test 'synonym(plegadis_falcinellus,glossyIbis). species/common': Success
+---------------------------------------------------------------
+ 87. Running test 'synonym(falcinellus,glossyIbis). rawSpecies/common'...
+  List = []
+  
+  yes
+  | ?-
+  Test 'synonym(falcinellus,glossyIbis). rawSpecies/common': Success
+---------------------------------------------------------------
+ 88. Running test 'synonym(glossyIbis,plegadis_falcinellus). common/compound'...
+  List = [_]
+  
+  yes
+  | ?-
+  Test 'synonym(glossyIbis,plegadis_falcinellus). common/compound': Success
+---------------------------------------------------------------
+ 89. Running test 'synonym(plegadis_falcinellus,glossyIbis). compound/common'...
+  List = [_]
+  
+  yes
+  | ?-
+  Test 'synonym(plegadis_falcinellus,glossyIbis). compound/common': Success
+---------------------------------------------------------------
+ 90. Running test 'synonym(bittern,ixobrychus). common/genus'...
+  List = [_]
+  
+  yes
+  | ?-
+  Test 'synonym(bittern,ixobrychus). common/genus': Success
+---------------------------------------------------------------
+ 91. Running test 'synonym(ixobrychus,botaurus). genus/genus with same common name'...
+  List = []
+  
+  yes
+  | ?-
+  Test 'synonym(ixobrychus,botaurus). genus/genus with same common name': Success
+---------------------------------------------------------------
+ 92. Running test 'synonym(bittern,botaurus). common/genus (same as above)'...
+  List = [_]
+  
+  yes
+  | ?-
+  Test 'synonym(bittern,botaurus). common/genus (same as above)': Success
+---------------------------------------------------------------
+ 93. Running test 'synonym(heron,egret). both are names for egretta'...
+  List = [_]
+  
+  yes
+  | ?-
+  Test 'synonym(heron,egret). both are names for egretta': Success
+---------------------------------------------------------------
+ 94. Running test 'synonym(greenHeron,X). common/'...
+  setof(X,synonym(greenHeron,X),L).
+  L = [butorides_virescens]
+  
+  yes
+  | ?-
+  Test 'synonym(greenHeron,X). common/': Success
+---------------------------------------------------------------
+ 95. Running test 'synonym(X,greenHeron). /common'...
+  setof(X,synonym(X,greenHeron),L).
+  L = [butorides_virescens]
+  
+  yes
+  | ?-
+  Test 'synonym(X,greenHeron). /common': Success
+---------------------------------------------------------------
+ 96. Running test 'synonym(butorides_virescens,X). cspecies/'...
+  setof(X,synonym(butorides_virescens,X),L).
+  L = [greenHeron]
+  
+  yes
+  | ?-
+  Test 'synonym(butorides_virescens,X). cspecies/': Success
+---------------------------------------------------------------
+ 97. Running test 'synonym(X,butorides_virescens). /cspecies'...
+  setof(X,synonym(X,butorides_virescens),L).
+  L = [greenHeron]
+  
+  yes
+  | ?-
+  Test 'synonym(X,butorides_virescens). /cspecies': Success
+---------------------------------------------------------------
+ 98. Running test 'synonym(X,heron). /common that maps to 3 genera'...
+  setof(X,synonym(X,heron),L).
+  L = [ardea,butorides,egret,egretta]
+  
+  yes
+  | ?-
+  Test 'synonym(X,heron). /common that maps to 3 genera': Success
+---------------------------------------------------------------
+ 99. Running test 'synonym(heron,X). /common that maps to 3 genera'...
+  setof(X,synonym(heron,X),L).
+  L = [ardea,butorides,egret,egretta]
+  
+  yes
+  | ?-
+  Test 'synonym(heron,X). /common that maps to 3 genera': Success
+---------------------------------------------------------------
+100. Running test 'isaStrict(exilis,exilis). equal species'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
+  | ?-
+  Test 'isaStrict(exilis,exilis). equal species': Incorrect output:
+          Expected expression to fail.
+---------------------------------------------------------------
+101. Running test 'isaStrict(ardeidae,ardeidae). equal families'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
+  | ?-
+  Test 'isaStrict(ardeidae,ardeidae). equal families': Incorrect output:
+          Expected expression to succeed.
+---------------------------------------------------------------
+102. Running test 'isaStrict(x,x). equal but unknown'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
   Test 'isaStrict(x,x). equal but unknown': Incorrect output:
+          Expected expression to fail.
+---------------------------------------------------------------
+103. Running test 'isaStrict(ixobrychus_exilis,ixobrychus). cspecies to genus'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
+  | ?-
+  Test 'isaStrict(ixobrychus_exilis,ixobrychus). cspecies to genus': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isaStrict(ixobrychus_exilis,ixobrychus). cspecies to genus'...
-  List = [_,_]
-  
-  yes
+104. Running test 'isaStrict(ixobrychus_exilis,ardeidae). cspecies to family'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isaStrict(ixobrychus_exilis,ixobrychus). cspecies to genus': Success
+  Test 'isaStrict(ixobrychus_exilis,ardeidae). cspecies to family': Incorrect output:
+          Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isaStrict(ixobrychus_exilis,ardeidae). cspecies to family'...
-  List = [_,_]
-  
-  yes
+105. Running test 'isaStrict(ixobrychus_exilis,pelecaniformes). cspecies to top'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isaStrict(ixobrychus_exilis,ardeidae). cspecies to family': Success
+  Test 'isaStrict(ixobrychus_exilis,pelecaniformes). cspecies to top': Incorrect output:
+          Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isaStrict(ixobrychus_exilis,pelecaniformes). cspecies to top'...
-  List = [_,_]
-  
-  yes
+106. Running test 'isaStrict(ixobrychus_exilis,botaurus). cspecies to wrong genus'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isaStrict(ixobrychus_exilis,pelecaniformes). cspecies to top': Success
+  Test 'isaStrict(ixobrychus_exilis,botaurus). cspecies to wrong genus': Incorrect output:
+          Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isaStrict(ixobrychus_exilis,botaurus). cspecies to wrong genus'...
-  List = []
-  
-  yes
+107. Running test 'isaStrict(ixobrychus_exilis,pelecanidae). cspecies to wrong family'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isaStrict(ixobrychus_exilis,botaurus). cspecies to wrong genus': Success
+  Test 'isaStrict(ixobrychus_exilis,pelecanidae). cspecies to wrong family': Incorrect output:
+          Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isaStrict(ixobrychus_exilis,pelecanidae). cspecies to wrong family'...
-  List = []
-  
-  yes
+108. Running test 'isaStrict(exilis,ixobrychus). raw species to genus'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isaStrict(ixobrychus_exilis,pelecanidae). cspecies to wrong family': Success
+  Test 'isaStrict(exilis,ixobrychus). raw species to genus': Incorrect output:
+          Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isaStrict(exilis,ixobrychus). raw species to genus'...
-  List = []
-  
-  yes
-  | ?-
-  Test 'isaStrict(exilis,ixobrychus). raw species to genus': Success
----------------------------------------------------------------
-Running test 'isaStrict(ixobrychus_exilis,X).'...
+109. Running test 'isaStrict(ixobrychus_exilis,X).'...
   setof(X,isaStrict(ixobrychus_exilis,X),L).
-  L = [ardeidae,ixobrychus,ixobrychus_exilis,pelecaniformes]
-  
-  yes
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isaStrict(ixobrychus_exilis,X).': Success
+  Test 'isaStrict(ixobrychus_exilis,X).': Incorrect output:
+          Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'isa(exilis,exilis). equal raw species'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+110. Running test 'isa(exilis,exilis). equal raw species'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(exilis,exilis). equal raw species': Unimplemented term:
+  Test 'isa(exilis,exilis). equal raw species': Incorrect output:
           Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isa(ardeidae,ardeidae). equal families'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+111. Running test 'isa(ardeidae,ardeidae). equal families'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(ardeidae,ardeidae). equal families': Unimplemented term:
+  Test 'isa(ardeidae,ardeidae). equal families': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(x,x). equal but unknown name'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+112. Running test 'isa(x,x). equal but unknown name'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(x,x). equal but unknown name': Unimplemented term:
+  Test 'isa(x,x). equal but unknown name': Incorrect output:
           Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isa(ixobrychus_exilis,ixobrychus). cspecies to genus'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+113. Running test 'isa(ixobrychus_exilis,ixobrychus). cspecies to genus'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(ixobrychus_exilis,ixobrychus). cspecies to genus': Unimplemented term:
+  Test 'isa(ixobrychus_exilis,ixobrychus). cspecies to genus': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(ixobrychus_exilis,ardeidae). cspecies to family'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+114. Running test 'isa(ixobrychus_exilis,ardeidae). cspecies to family'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(ixobrychus_exilis,ardeidae). cspecies to family': Unimplemented term:
+  Test 'isa(ixobrychus_exilis,ardeidae). cspecies to family': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(ixobrychus_exilis,pelecaniformes). cspecies to top'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+115. Running test 'isa(ixobrychus_exilis,pelecaniformes). cspecies to top'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(ixobrychus_exilis,pelecaniformes). cspecies to top': Unimplemented term:
+  Test 'isa(ixobrychus_exilis,pelecaniformes). cspecies to top': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(ixobrychus_exilis,botaurus). cspecies to wrong genus'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+116. Running test 'isa(ixobrychus_exilis,botaurus). cspecies to wrong genus'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(ixobrychus_exilis,botaurus). cspecies to wrong genus': Unimplemented term:
+  Test 'isa(ixobrychus_exilis,botaurus). cspecies to wrong genus': Incorrect output:
           Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isa(ixobrychus_exilis,pelecanidae). cspecies to wrong family'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+117. Running test 'isa(ixobrychus_exilis,pelecanidae). cspecies to wrong family'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(ixobrychus_exilis,pelecanidae). cspecies to wrong family': Unimplemented term:
+  Test 'isa(ixobrychus_exilis,pelecanidae). cspecies to wrong family': Incorrect output:
           Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isa(exilis,ixobrychus). raw species to genus'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+118. Running test 'isa(exilis,ixobrychus). raw species to genus'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(exilis,ixobrychus). raw species to genus': Unimplemented term:
+  Test 'isa(exilis,ixobrychus). raw species to genus': Incorrect output:
           Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isa(ixobrychus_exilis,X).'...
+119. Running test 'isa(ixobrychus_exilis,X).'...
   setof(X,isa(ixobrychus_exilis,X),L).
-  uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(ixobrychus_exilis,X).': Unimplemented term:
+  Test 'isa(ixobrychus_exilis,X).': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'isa(X,pelecanidae).'...
+120. Running test 'isa(X,pelecanidae).'...
   setof(X,isa(X,pelecanidae),L).
-  uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(X,pelecanidae).': Unimplemented term:
+  Test 'isa(X,pelecanidae).': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'isa(plegadis,ibis). equal genera/common'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+121. Running test 'isa(plegadis,ibis). equal genera/common'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(plegadis,ibis). equal genera/common': Unimplemented term:
+  Test 'isa(plegadis,ibis). equal genera/common': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(plegadis_chihi,ibis). equal cspecies/common'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+122. Running test 'isa(plegadis_chihi,ibis). equal cspecies/common'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(plegadis_chihi,ibis). equal cspecies/common': Unimplemented term:
+  Test 'isa(plegadis_chihi,ibis). equal cspecies/common': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(cattleEgret,cattleEgret). equal common/common'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+123. Running test 'isa(cattleEgret,cattleEgret). equal common/common'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(cattleEgret,cattleEgret). equal common/common': Unimplemented term:
+  Test 'isa(cattleEgret,cattleEgret). equal common/common': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(chihi,ibis). equal rawSpecies/common'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+124. Running test 'isa(chihi,ibis). equal rawSpecies/common'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(chihi,ibis). equal rawSpecies/common': Unimplemented term:
+  Test 'isa(chihi,ibis). equal rawSpecies/common': Incorrect output:
           Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isa(platalea_ajaja,pelecaniformes). bottom to top'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+125. Running test 'isa(platalea_ajaja,pelecaniformes). bottom to top'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(platalea_ajaja,pelecaniformes). bottom to top': Unimplemented term:
+  Test 'isa(platalea_ajaja,pelecaniformes). bottom to top': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(cattleEgret,bubulcus_ibis). equal commonName to compound species'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+126. Running test 'isa(cattleEgret,bubulcus_ibis). equal commonName to compound species'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(cattleEgret,bubulcus_ibis). equal commonName to compound species': Unimplemented term:
+  Test 'isa(cattleEgret,bubulcus_ibis). equal commonName to compound species': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(whiteIbis,eudocimus). common species name to genus'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+127. Running test 'isa(whiteIbis,eudocimus). common species name to genus'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(whiteIbis,eudocimus). common species name to genus': Unimplemented term:
+  Test 'isa(whiteIbis,eudocimus). common species name to genus': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(leastBittern,ardeidae). common species name to family'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+128. Running test 'isa(leastBittern,ardeidae). common species name to family'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(leastBittern,ardeidae). common species name to family': Unimplemented term:
+  Test 'isa(leastBittern,ardeidae). common species name to family': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(leastBittern,bittern). common species name to common family'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+129. Running test 'isa(leastBittern,bittern). common species name to common family'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(leastBittern,bittern). common species name to common family': Unimplemented term:
+  Test 'isa(leastBittern,bittern). common species name to common family': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(whiteFacedIbis,chihi). common species name to species alone'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+130. Running test 'isa(whiteFacedIbis,chihi). common species name to species alone'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(whiteFacedIbis,chihi). common species name to species alone': Unimplemented term:
+  Test 'isa(whiteFacedIbis,chihi). common species name to species alone': Incorrect output:
           Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isa(plegadis_falcinellus,threskiornithdae). compound species name to family'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+131. Running test 'isa(plegadis_falcinellus,threskiornithdae). compound species name to family'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(plegadis_falcinellus,threskiornithdae). compound species name to family': Unimplemented term:
+  Test 'isa(plegadis_falcinellus,threskiornithdae). compound species name to family': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(nyctanassa,nightHeron). genus to genus common name'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+132. Running test 'isa(nyctanassa,nightHeron). genus to genus common name'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(nyctanassa,nightHeron). genus to genus common name': Unimplemented term:
+  Test 'isa(nyctanassa,nightHeron). genus to genus common name': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(nyctanassa,egret). genus to wrong genus common name'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+133. Running test 'isa(nyctanassa,egret). genus to wrong genus common name'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(nyctanassa,egret). genus to wrong genus common name': Unimplemented term:
+  Test 'isa(nyctanassa,egret). genus to wrong genus common name': Incorrect output:
           Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isa(nyctanassa_violacea,nightHeron). cspecies to genus common name'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+134. Running test 'isa(nyctanassa_violacea,nightHeron). cspecies to genus common name'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(nyctanassa_violacea,nightHeron). cspecies to genus common name': Unimplemented term:
+  Test 'isa(nyctanassa_violacea,nightHeron). cspecies to genus common name': Incorrect output:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'isa(nyctanassa_violacea,egret). cspecies to wrong genus common name'...
-  uncaught exception: error(existence_error(procedure,isa/2),findall/3)
+135. Running test 'isa(nyctanassa_violacea,egret). cspecies to wrong genus common name'...
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(nyctanassa_violacea,egret). cspecies to wrong genus common name': Unimplemented term:
+  Test 'isa(nyctanassa_violacea,egret). cspecies to wrong genus common name': Incorrect output:
           Expected expression to fail.
 ---------------------------------------------------------------
-Running test 'isa(x,X). unknown/'...
+136. Running test 'isa(x,X). unknown/'...
   setof(X,isa(x,X),L).
-  uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
   Test 'isa(x,X). unknown/': Incorrect output:
-          Expected list starting with 'L = [' and ending with ']', but got 'uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+          Expected list starting with 'L = [' and ending with ']', but got 'uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-'.
 ---------------------------------------------------------------
-Running test 'isa(ardea_herodias,X). species'...
+137. Running test 'isa(ardea_herodias,X). species'...
   setof(X,isa(ardea_herodias,X),L).
-  uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(ardea_herodias,X). species': Unimplemented term:
+  Test 'isa(ardea_herodias,X). species': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'isa(greatBlueHeron,X). common species'...
+138. Running test 'isa(greatBlueHeron,X). common species'...
   setof(X,isa(greatBlueHeron,X),L).
-  uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(greatBlueHeron,X). common species': Unimplemented term:
+  Test 'isa(greatBlueHeron,X). common species': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'isa(ixobrychus_exilis,X). compound species'...
+139. Running test 'isa(ixobrychus_exilis,X). compound species'...
   setof(X,isa(ixobrychus_exilis,X),L).
-  uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(ixobrychus_exilis,X). compound species': Unimplemented term:
+  Test 'isa(ixobrychus_exilis,X). compound species': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'isa(butorides,X). genus'...
+140. Running test 'isa(butorides,X). genus'...
   setof(X,isa(butorides,X),L).
-  uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(butorides,X). genus': Unimplemented term:
+  Test 'isa(butorides,X). genus': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'isa(X,ardeidae). family'...
+141. Running test 'isa(X,ardeidae). family'...
   setof(X,isa(X,ardeidae),L).
-  uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(X,ardeidae). family': Unimplemented term:
+  Test 'isa(X,ardeidae). family': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'isa(X,eudocimus_albus). compound species'...
+142. Running test 'isa(X,eudocimus_albus). compound species'...
   setof(X,isa(X,eudocimus_albus),L).
-  uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(X,eudocimus_albus). compound species': Unimplemented term:
+  Test 'isa(X,eudocimus_albus). compound species': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'isa(X,bittern). common species (multi)'...
+143. Running test 'isa(X,bittern). common species (multi)'...
   setof(X,isa(X,bittern),L).
-  uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'isa(X,bittern). common species (multi)': Unimplemented term:
+  Test 'isa(X,bittern). common species (multi)': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'countSpecies(botaurus_lentiginosus,1). species'...
+144. Running test 'countSpecies(botaurus_lentiginosus,1). species'...
   uncaught exception: error(existence_error(procedure,countSpecies/2),findall/3)
   | ?-
   Test 'countSpecies(botaurus_lentiginosus,1). species': Unimplemented term:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'countSpecies(botaurus,1). single-species genus'...
+145. Running test 'countSpecies(botaurus,1). single-species genus'...
   uncaught exception: error(existence_error(procedure,countSpecies/2),findall/3)
   | ?-
   Test 'countSpecies(botaurus,1). single-species genus': Unimplemented term:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'countSpecies(egretta,4). 4-species genus'...
+146. Running test 'countSpecies(egretta,4). 4-species genus'...
   uncaught exception: error(existence_error(procedure,countSpecies/2),findall/3)
   | ?-
   Test 'countSpecies(egretta,4). 4-species genus': Unimplemented term:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'countSpecies(ardeidae,12). 12-species family'...
+147. Running test 'countSpecies(ardeidae,12). 12-species family'...
   uncaught exception: error(existence_error(procedure,countSpecies/2),findall/3)
   | ?-
   Test 'countSpecies(ardeidae,12). 12-species family': Unimplemented term:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'countSpecies(pelecaniformes,18). 18-species order'...
+148. Running test 'countSpecies(pelecaniformes,18). 18-species order'...
   uncaught exception: error(existence_error(procedure,countSpecies/2),findall/3)
   | ?-
   Test 'countSpecies(pelecaniformes,18). 18-species order': Unimplemented term:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'countSpecies(x,0). 0-species unknown name'...
+149. Running test 'countSpecies(x,0). 0-species unknown name'...
   uncaught exception: error(existence_error(procedure,countSpecies/2),findall/3)
   | ?-
   Test 'countSpecies(x,0). 0-species unknown name': Unimplemented term:
           Expected expression to succeed.
 ---------------------------------------------------------------
-Running test 'countSpecies(botaurus_lentiginosus,X). species'...
+150. Running test 'countSpecies(botaurus_lentiginosus,X). species'...
   setof(X,countSpecies(botaurus_lentiginosus,X),L).
   uncaught exception: error(existence_error(procedure,countSpecies/2),setof/3)
   | ?-
   Test 'countSpecies(botaurus_lentiginosus,X). species': Unimplemented term:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'countSpecies(botaurus,X). single-species genus'...
+151. Running test 'countSpecies(botaurus,X). single-species genus'...
   setof(X,countSpecies(botaurus,X),L).
   uncaught exception: error(existence_error(procedure,countSpecies/2),setof/3)
   | ?-
   Test 'countSpecies(botaurus,X). single-species genus': Unimplemented term:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'countSpecies(egretta,X). 4-species genus'...
+152. Running test 'countSpecies(egretta,X). 4-species genus'...
   setof(X,countSpecies(egretta,X),L).
   uncaught exception: error(existence_error(procedure,countSpecies/2),setof/3)
   | ?-
   Test 'countSpecies(egretta,X). 4-species genus': Unimplemented term:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'countSpecies(ardeidae,X). 12-species family'...
+153. Running test 'countSpecies(ardeidae,X). 12-species family'...
   setof(X,countSpecies(ardeidae,X),L).
   uncaught exception: error(existence_error(procedure,countSpecies/2),setof/3)
   | ?-
   Test 'countSpecies(ardeidae,X). 12-species family': Unimplemented term:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'countSpecies(pelecaniformes,X). 18-species order'...
+154. Running test 'countSpecies(pelecaniformes,X). 18-species order'...
   setof(X,countSpecies(pelecaniformes,X),L).
   uncaught exception: error(existence_error(procedure,countSpecies/2),setof/3)
   | ?-
   Test 'countSpecies(pelecaniformes,X). 18-species order': Unimplemented term:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'countSpecies(x,X). 0-species unknown name'...
+155. Running test 'countSpecies(x,X). 0-species unknown name'...
   setof(X,countSpecies(x,X),L).
   uncaught exception: error(existence_error(procedure,countSpecies/2),setof/3)
   | ?-
   Test 'countSpecies(x,X). 0-species unknown name': Unimplemented term:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'rangesTo(botaurus_lentiginosus,alberta). simple species'...
-  uncaught exception: error(existence_error(procedure,rangesTo/2),findall/3)
+156. Running test 'rangesTo(botaurus_lentiginosus,alberta). simple species'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'rangesTo(botaurus_lentiginosus,alberta). simple species': Unimplemented term:
-          Expected expression to succeed.
+  Test 'rangesTo(botaurus_lentiginosus,alberta). simple species': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(botaurus_lentiginosus,canada). species, inferred location'...
-  uncaught exception: error(existence_error(procedure,rangesTo/2),findall/3)
+157. Running test 'rangesTo(botaurus_lentiginosus,canada). species, inferred location'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'rangesTo(botaurus_lentiginosus,canada). species, inferred location': Unimplemented term:
-          Expected expression to succeed.
+  Test 'rangesTo(botaurus_lentiginosus,canada). species, inferred location': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(pelecanus,alberta). simple genus'...
-  uncaught exception: error(existence_error(procedure,rangesTo/2),findall/3)
+158. Running test 'rangesTo(pelecanus,alberta). simple genus'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'rangesTo(pelecanus,alberta). simple genus': Unimplemented term:
-          Expected expression to succeed.
+  Test 'rangesTo(pelecanus,alberta). simple genus': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(pelecanus,canada). genus, inferred location'...
-  uncaught exception: error(existence_error(procedure,rangesTo/2),findall/3)
+159. Running test 'rangesTo(pelecanus,canada). genus, inferred location'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'rangesTo(pelecanus,canada). genus, inferred location': Unimplemented term:
-          Expected expression to succeed.
+  Test 'rangesTo(pelecanus,canada). genus, inferred location': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(pelecanidae,canada). order, inferred location'...
-  uncaught exception: error(existence_error(procedure,rangesTo/2),findall/3)
+160. Running test 'rangesTo(pelecanidae,canada). order, inferred location'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'rangesTo(pelecanidae,canada). order, inferred location': Unimplemented term:
-          Expected expression to succeed.
+  Test 'rangesTo(pelecanidae,canada). order, inferred location': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(ardea_alba,alberta). speces, wrong location'...
-  uncaught exception: error(existence_error(procedure,rangesTo/2),findall/3)
+161. Running test 'rangesTo(ardea_alba,alberta). speces, wrong location'...
+  List = []
+  
+  yes
   | ?-
-  Test 'rangesTo(ardea_alba,alberta). speces, wrong location': Unimplemented term:
-          Expected expression to fail.
+  Test 'rangesTo(ardea_alba,alberta). speces, wrong location': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(platalea_ajaja,canada). speces, wrong location'...
-  uncaught exception: error(existence_error(procedure,rangesTo/2),findall/3)
+162. Running test 'rangesTo(platalea_ajaja,canada). speces, wrong location'...
+  List = []
+  
+  yes
   | ?-
-  Test 'rangesTo(platalea_ajaja,canada). speces, wrong location': Unimplemented term:
-          Expected expression to fail.
+  Test 'rangesTo(platalea_ajaja,canada). speces, wrong location': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(botaurus_lentiginosus,X). species, inferred location'...
+163. Running test 'rangesTo(botaurus_lentiginosus,X). species, inferred location'...
   setof(X,rangesTo(botaurus_lentiginosus,X),L).
-  uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
+  L = [alberta,canada]
+  
+  yes
   | ?-
-  Test 'rangesTo(botaurus_lentiginosus,X). species, inferred location': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'rangesTo(botaurus_lentiginosus,X). species, inferred location': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(pelecanus,X). simple genus'...
+164. Running test 'rangesTo(pelecanus,X). simple genus'...
   setof(X,rangesTo(pelecanus,X),L).
-  uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
+  L = [alberta,canada]
+  
+  yes
   | ?-
-  Test 'rangesTo(pelecanus,X). simple genus': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'rangesTo(pelecanus,X). simple genus': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(pelecanus,X). genus, inferred location'...
+165. Running test 'rangesTo(pelecanus,X). genus, inferred location'...
   setof(X,rangesTo(pelecanus,X),L).
-  uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
+  L = [alberta,canada]
+  
+  yes
   | ?-
-  Test 'rangesTo(pelecanus,X). genus, inferred location': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'rangesTo(pelecanus,X). genus, inferred location': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(pelecanidae,X). order, inferred location'...
+166. Running test 'rangesTo(pelecanidae,X). order, inferred location'...
   setof(X,rangesTo(pelecanidae,X),L).
-  uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
+  L = [alberta,canada]
+  
+  yes
   | ?-
-  Test 'rangesTo(pelecanidae,X). order, inferred location': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'rangesTo(pelecanidae,X). order, inferred location': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(ardea_alba,alberta). speces, wrong location'...
+167. Running test 'rangesTo(ardea_alba,alberta). speces, wrong location'...
   setof(X,rangesTo(ardea_alba,alberta),L).
-  uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
+  no
   | ?-
-  Test 'rangesTo(ardea_alba,alberta). speces, wrong location': Incorrect output:
-          Expected list starting with 'L = [' and ending with ']', but got 'uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
-  | ?-'.
+  Test 'rangesTo(ardea_alba,alberta). speces, wrong location': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(platalea_ajaja,canada). speces, wrong location'...
+168. Running test 'rangesTo(platalea_ajaja,canada). speces, wrong location'...
   setof(X,rangesTo(platalea_ajaja,canada),L).
-  uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
+  no
   | ?-
-  Test 'rangesTo(platalea_ajaja,canada). speces, wrong location': Incorrect output:
-          Expected list starting with 'L = [' and ending with ']', but got 'uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
-  | ?-'.
+  Test 'rangesTo(platalea_ajaja,canada). speces, wrong location': Success
 ---------------------------------------------------------------
-Running test 'rangesTo(X,alberta). /alberta'...
+169. Running test 'rangesTo(X,alberta). /alberta'...
   setof(X,rangesTo(X,alberta),L).
-  uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'rangesTo(X,alberta). /alberta': Unimplemented term:
+  Test 'rangesTo(X,alberta). /alberta': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'rangesTo(X,canada). /canada'...
+170. Running test 'rangesTo(X,canada). /canada'...
   setof(X,rangesTo(X,canada),L).
-  uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'rangesTo(X,canada). /canada': Unimplemented term:
+  Test 'rangesTo(X,canada). /canada': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'rangesTo(X,Y). * / *'...
+171. Running test 'rangesTo(X,Y). * / *'...
   setof([X,Y],rangesTo(X,Y),L).
-  uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
+  uncaught exception: error(instantiation_error,atom_concat/3)
   | ?-
-  Test 'rangesTo(X,Y). * / *': Unimplemented term:
+  Test 'rangesTo(X,Y). * / *': Incorrect output:
           Expected starts-with of L = [
 ---------------------------------------------------------------
-Running test 'habitat(pelecanus_erythrorhynchos,lakePond). [_'...
-  uncaught exception: error(existence_error(procedure,habitat/2),findall/3)
+172. Running test 'habitat(pelecanus_erythrorhynchos,lakePond). true'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'habitat(pelecanus_erythrorhynchos,lakePond). [_': Unimplemented term:
-          Expected expression to succeed.
+  Test 'habitat(pelecanus_erythrorhynchos,lakePond). true': Success
 ---------------------------------------------------------------
-Running test 'habitat(botaurus_lentiginosus,marsh). [_'...
-  uncaught exception: error(existence_error(procedure,habitat/2),findall/3)
+173. Running test 'habitat(botaurus_lentiginosus,marsh). true'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'habitat(botaurus_lentiginosus,marsh). [_': Unimplemented term:
-          Expected expression to succeed.
+  Test 'habitat(botaurus_lentiginosus,marsh). true': Success
 ---------------------------------------------------------------
-Running test 'habitat(botaurus_lentiginosus,ocean). false'...
-  uncaught exception: error(existence_error(procedure,habitat/2),findall/3)
+174. Running test 'habitat(botaurus_lentiginosus,ocean). false'...
+  List = []
+  
+  yes
   | ?-
-  Test 'habitat(botaurus_lentiginosus,ocean). false': Unimplemented term:
-          Expected expression to fail.
+  Test 'habitat(botaurus_lentiginosus,ocean). false': Success
 ---------------------------------------------------------------
-Running test 'habitat(x,ocean). false'...
-  uncaught exception: error(existence_error(procedure,habitat/2),findall/3)
+175. Running test 'habitat(x,ocean). false'...
+  List = []
+  
+  yes
   | ?-
-  Test 'habitat(x,ocean). false': Unimplemented term:
-          Expected expression to fail.
+  Test 'habitat(x,ocean). false': Success
 ---------------------------------------------------------------
-Running test 'habitat(egretta_tricolor,X). single'...
+176. Running test 'habitat(egretta_tricolor,X). single'...
   setof(X,habitat(egretta_tricolor,X),L).
-  uncaught exception: error(existence_error(procedure,habitat/2),setof/3)
+  L = [marsh]
+  
+  yes
   | ?-
-  Test 'habitat(egretta_tricolor,X). single': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'habitat(egretta_tricolor,X). single': Success
 ---------------------------------------------------------------
-Running test 'habitat(X,ocean). single'...
+177. Running test 'habitat(X,ocean). single'...
   setof(X,habitat(X,ocean),L).
-  uncaught exception: error(existence_error(procedure,habitat/2),setof/3)
+  L = [pelecanidae,pelecaniformes,pelecanus,pelecanus_occidentalis]
+  
+  yes
   | ?-
-  Test 'habitat(X,ocean). single': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'habitat(X,ocean). single': Incorrect output:
+          Expected bag of [pelecanus_occidentalis], but got [pelecanidae,pelecaniformes,pelecanus,pelecanus_occidentalis]
 ---------------------------------------------------------------
-Running test 'habitat(X,marsh). multiple'...
+178. Running test 'habitat(X,marsh). multiple'...
   setof(X,habitat(X,marsh),L).
-  uncaught exception: error(existence_error(procedure,habitat/2),setof/3)
+  L = [ardea,ardea_alba,ardea_herodias,ardeidae,botaurus_lentiginosus,bubulcus,bubulcus_ibis,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,eudocimus,eudocimus_albus,ixobrychus,ixobrychus_exilis,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecaniformes,platalea,platalea_ajaja,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
+  
+  yes
   | ?-
-  Test 'habitat(X,marsh). multiple': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'habitat(X,marsh). multiple': Incorrect output:
+          Expected bag of [ardea_alba,ardea_herodias,botaurus_lentiginosus,bubulcus_ibis,butorides_virescens,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,eudocimus_albus,ixobrychus_exilis,nyctanassa_violacea,nycticorax_nycticorax,platalea_ajaja,plegadis_chihi,plegadis_falcinellus], but got [ardea,ardea_alba,ardea_herodias,ardeidae,botaurus_lentiginosus,bubulcus,bubulcus_ibis,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,eudocimus,eudocimus_albus,ixobrychus,ixobrychus_exilis,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecaniformes,platalea,platalea_ajaja,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
 ---------------------------------------------------------------
-Running test 'habitat(pelecanus,ocean). genus'...
-  uncaught exception: error(existence_error(procedure,habitat/2),findall/3)
+179. Running test 'habitat(pelecanus,ocean). genus'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'habitat(pelecanus,ocean). genus': Unimplemented term:
-          Expected expression to succeed.
+  Test 'habitat(pelecanus,ocean). genus': Success
 ---------------------------------------------------------------
-Running test 'habitat(pelecaniformes,ocean). order'...
-  uncaught exception: error(existence_error(procedure,habitat/2),findall/3)
+180. Running test 'habitat(pelecaniformes,ocean). order'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'habitat(pelecaniformes,ocean). order': Unimplemented term:
-          Expected expression to succeed.
+  Test 'habitat(pelecaniformes,ocean). order': Success
 ---------------------------------------------------------------
-Running test 'habitat(pelecaniformes,X). multiple'...
+181. Running test 'habitat(pelecaniformes,X). multiple'...
   setof(X,habitat(pelecaniformes,X),L).
-  uncaught exception: error(existence_error(procedure,habitat/2),setof/3)
+  L = [lakePond,marsh,ocean]
+  
+  yes
   | ?-
-  Test 'habitat(pelecaniformes,X). multiple': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'habitat(pelecaniformes,X). multiple': Success
 ---------------------------------------------------------------
-Running test 'food(pelecanus_erythrorhynchos,fish). [_'...
-  uncaught exception: error(existence_error(procedure,food/2),findall/3)
+182. Running test 'food(pelecanus_erythrorhynchos,fish). true'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'food(pelecanus_erythrorhynchos,fish). [_': Unimplemented term:
-          Expected expression to succeed.
+  Test 'food(pelecanus_erythrorhynchos,fish). true': Success
 ---------------------------------------------------------------
-Running test 'food(bubulcus_ibis,insects). [_'...
-  uncaught exception: error(existence_error(procedure,food/2),findall/3)
+183. Running test 'food(bubulcus_ibis,insects). true'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'food(bubulcus_ibis,insects). [_': Unimplemented term:
-          Expected expression to succeed.
+  Test 'food(bubulcus_ibis,insects). true': Success
 ---------------------------------------------------------------
-Running test 'food(botaurus_lentiginosus,insects). false'...
-  uncaught exception: error(existence_error(procedure,food/2),findall/3)
+184. Running test 'food(botaurus_lentiginosus,insects). false'...
+  List = []
+  
+  yes
   | ?-
-  Test 'food(botaurus_lentiginosus,insects). false': Unimplemented term:
-          Expected expression to fail.
+  Test 'food(botaurus_lentiginosus,insects). false': Success
 ---------------------------------------------------------------
-Running test 'food(x,fish). false'...
-  uncaught exception: error(existence_error(procedure,food/2),findall/3)
+185. Running test 'food(x,fish). false'...
+  List = []
+  
+  yes
   | ?-
-  Test 'food(x,fish). false': Unimplemented term:
-          Expected expression to fail.
+  Test 'food(x,fish). false': Success
 ---------------------------------------------------------------
-Running test 'food(egretta_tricolor,X). single'...
+186. Running test 'food(egretta_tricolor,X). single'...
   setof(X,food(egretta_tricolor,X),L).
-  uncaught exception: error(existence_error(procedure,food/2),setof/3)
+  L = [fish]
+  
+  yes
   | ?-
-  Test 'food(egretta_tricolor,X). single': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'food(egretta_tricolor,X). single': Success
 ---------------------------------------------------------------
-Running test 'food(X,insects). single'...
+187. Running test 'food(X,insects). single'...
   setof(X,food(X,insects),L).
-  uncaught exception: error(existence_error(procedure,food/2),setof/3)
+  L = [ardeidae,bubulcus,bubulcus_ibis,eudocimus,eudocimus_albus,nyctanassa,nyctanassa_violacea,pelecaniformes,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
+  
+  yes
   | ?-
-  Test 'food(X,insects). single': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'food(X,insects). single': Incorrect output:
+          Expected bag of [bubulcus_ibis,eudocimus_albus,nyctanassa_violacea,plegadis_chihi,plegadis_falcinellus], but got [ardeidae,bubulcus,bubulcus_ibis,eudocimus,eudocimus_albus,nyctanassa,nyctanassa_violacea,pelecaniformes,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
 ---------------------------------------------------------------
-Running test 'food(pelecanus,fish). genus'...
-  uncaught exception: error(existence_error(procedure,food/2),findall/3)
+188. Running test 'food(pelecanus,fish). genus'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'food(pelecanus,fish). genus': Unimplemented term:
-          Expected expression to succeed.
+  Test 'food(pelecanus,fish). genus': Success
 ---------------------------------------------------------------
-Running test 'food(pelecaniformes,insects). order'...
-  uncaught exception: error(existence_error(procedure,food/2),findall/3)
+189. Running test 'food(pelecaniformes,insects). order'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'food(pelecaniformes,insects). order': Unimplemented term:
-          Expected expression to succeed.
+  Test 'food(pelecaniformes,insects). order': Success
 ---------------------------------------------------------------
-Running test 'food(pelecaniformes,X). multiple'...
+190. Running test 'food(pelecaniformes,X). multiple'...
   setof(X,food(pelecaniformes,X),L).
-  uncaught exception: error(existence_error(procedure,food/2),setof/3)
+  L = [fish,insects]
+  
+  yes
   | ?-
-  Test 'food(pelecaniformes,X). multiple': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'food(pelecaniformes,X). multiple': Success
 ---------------------------------------------------------------
-Running test 'nesting(pelecanus_erythrorhynchos,ground). [_'...
-  uncaught exception: error(existence_error(procedure,nesting/2),findall/3)
+191. Running test 'nesting(pelecanus_erythrorhynchos,ground). true'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'nesting(pelecanus_erythrorhynchos,ground). [_': Unimplemented term:
-          Expected expression to succeed.
+  Test 'nesting(pelecanus_erythrorhynchos,ground). true': Success
 ---------------------------------------------------------------
-Running test 'nesting(egretta_tricolor,tree). [_'...
-  uncaught exception: error(existence_error(procedure,nesting/2),findall/3)
+192. Running test 'nesting(egretta_tricolor,tree). true'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'nesting(egretta_tricolor,tree). [_': Unimplemented term:
-          Expected expression to succeed.
+  Test 'nesting(egretta_tricolor,tree). true': Success
 ---------------------------------------------------------------
-Running test 'nesting(botaurus_lentiginosus,tree). false'...
-  uncaught exception: error(existence_error(procedure,nesting/2),findall/3)
+193. Running test 'nesting(botaurus_lentiginosus,tree). false'...
+  List = []
+  
+  yes
   | ?-
-  Test 'nesting(botaurus_lentiginosus,tree). false': Unimplemented term:
-          Expected expression to fail.
+  Test 'nesting(botaurus_lentiginosus,tree). false': Success
 ---------------------------------------------------------------
-Running test 'nesting(x,tree). false'...
-  uncaught exception: error(existence_error(procedure,nesting/2),findall/3)
+194. Running test 'nesting(x,tree). false'...
+  List = []
+  
+  yes
   | ?-
-  Test 'nesting(x,tree). false': Unimplemented term:
-          Expected expression to fail.
+  Test 'nesting(x,tree). false': Success
 ---------------------------------------------------------------
-Running test 'nesting(egretta_tricolor,X). single'...
+195. Running test 'nesting(egretta_tricolor,X). single'...
   setof(X,nesting(egretta_tricolor,X),L).
-  uncaught exception: error(existence_error(procedure,nesting/2),setof/3)
+  L = [tree]
+  
+  yes
   | ?-
-  Test 'nesting(egretta_tricolor,X). single': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'nesting(egretta_tricolor,X). single': Success
 ---------------------------------------------------------------
-Running test 'nesting(X,ground). multi'...
+196. Running test 'nesting(X,ground). multi'...
   setof(X,nesting(X,ground),L).
-  uncaught exception: error(existence_error(procedure,nesting/2),setof/3)
+  L = [ardeidae,botaurus,botaurus_lentiginosus,ixobrychus,ixobrychus_exilis,pelecanidae,pelecaniformes,pelecanus,pelecanus_erythrorhynchos,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
+  
+  yes
   | ?-
-  Test 'nesting(X,ground). multi': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'nesting(X,ground). multi': Incorrect output:
+          Expected bag of [botaurus_lentiginosus,ixobrychus_exilis,pelecanus_erythrorhynchos,plegadis_chihi,plegadis_falcinellus], but got [ardeidae,botaurus,botaurus_lentiginosus,ixobrychus,ixobrychus_exilis,pelecanidae,pelecaniformes,pelecanus,pelecanus_erythrorhynchos,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
 ---------------------------------------------------------------
-Running test 'nesting(X,tree). multi'...
+197. Running test 'nesting(X,tree). multi'...
   setof(X,nesting(X,tree),L).
-  uncaught exception: error(existence_error(procedure,nesting/2),setof/3)
+  L = [ardea,ardea_alba,ardea_herodias,ardeidae,bubulcus,bubulcus_ibis,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,eudocimus,eudocimus_albus,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecanidae,pelecaniformes,pelecanus,pelecanus_occidentalis,platalea,platalea_ajaja,threskiornithdae]
+  
+  yes
   | ?-
-  Test 'nesting(X,tree). multi': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'nesting(X,tree). multi': Incorrect output:
+          Expected bag of [ardea_alba,ardea_herodias,bubulcus_ibis,butorides_virescens,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,eudocimus_albus,nyctanassa_violacea,nycticorax_nycticorax,pelecanus_occidentalis,platalea_ajaja], but got [ardea,ardea_alba,ardea_herodias,ardeidae,bubulcus,bubulcus_ibis,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,eudocimus,eudocimus_albus,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecanidae,pelecaniformes,pelecanus,pelecanus_occidentalis,platalea,platalea_ajaja,threskiornithdae]
 ---------------------------------------------------------------
-Running test 'nesting(pelecanus,ground). genus'...
-  uncaught exception: error(existence_error(procedure,nesting/2),findall/3)
+198. Running test 'nesting(pelecanus,ground). genus'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'nesting(pelecanus,ground). genus': Unimplemented term:
-          Expected expression to succeed.
+  Test 'nesting(pelecanus,ground). genus': Success
 ---------------------------------------------------------------
-Running test 'nesting(pelecanus,tree). genus'...
-  uncaught exception: error(existence_error(procedure,nesting/2),findall/3)
+199. Running test 'nesting(pelecanus,tree). genus'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'nesting(pelecanus,tree). genus': Unimplemented term:
-          Expected expression to succeed.
+  Test 'nesting(pelecanus,tree). genus': Success
 ---------------------------------------------------------------
-Running test 'nesting(pelecaniformes,tree). order'...
-  uncaught exception: error(existence_error(procedure,nesting/2),findall/3)
+200. Running test 'nesting(pelecaniformes,tree). order'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'nesting(pelecaniformes,tree). order': Unimplemented term:
-          Expected expression to succeed.
+  Test 'nesting(pelecaniformes,tree). order': Success
 ---------------------------------------------------------------
-Running test 'nesting(pelecaniformes,X). multiple'...
+201. Running test 'nesting(pelecaniformes,X). multiple'...
   setof(X,nesting(pelecaniformes,X),L).
-  uncaught exception: error(existence_error(procedure,nesting/2),setof/3)
+  L = [ground,tree]
+  
+  yes
   | ?-
-  Test 'nesting(pelecaniformes,X). multiple': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'nesting(pelecaniformes,X). multiple': Success
 ---------------------------------------------------------------
-Running test 'behavior(pelecanus_erythrorhynchos,surfaceDive). [_'...
-  uncaught exception: error(existence_error(procedure,behavior/2),findall/3)
+202. Running test 'behavior(pelecanus_erythrorhynchos,surfaceDive). true'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'behavior(pelecanus_erythrorhynchos,surfaceDive). [_': Unimplemented term:
-          Expected expression to succeed.
+  Test 'behavior(pelecanus_erythrorhynchos,surfaceDive). true': Success
 ---------------------------------------------------------------
-Running test 'behavior(botaurus_lentiginosus,stalking). [_'...
-  uncaught exception: error(existence_error(procedure,behavior/2),findall/3)
+203. Running test 'behavior(botaurus_lentiginosus,stalking). true'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'behavior(botaurus_lentiginosus,stalking). [_': Unimplemented term:
-          Expected expression to succeed.
+  Test 'behavior(botaurus_lentiginosus,stalking). true': Success
 ---------------------------------------------------------------
-Running test 'behavior(botaurus_lentiginosus,aerialDive). false'...
-  uncaught exception: error(existence_error(procedure,behavior/2),findall/3)
+204. Running test 'behavior(botaurus_lentiginosus,aerialDive). false'...
+  List = []
+  
+  yes
   | ?-
-  Test 'behavior(botaurus_lentiginosus,aerialDive). false': Unimplemented term:
-          Expected expression to fail.
+  Test 'behavior(botaurus_lentiginosus,aerialDive). false': Success
 ---------------------------------------------------------------
-Running test 'behavior(x,stalking). false'...
-  uncaught exception: error(existence_error(procedure,behavior/2),findall/3)
+205. Running test 'behavior(x,stalking). false'...
+  List = []
+  
+  yes
   | ?-
-  Test 'behavior(x,stalking). false': Unimplemented term:
-          Expected expression to fail.
+  Test 'behavior(x,stalking). false': Success
 ---------------------------------------------------------------
-Running test 'behavior(egretta_tricolor,X). single'...
+206. Running test 'behavior(egretta_tricolor,X). single'...
   setof(X,behavior(egretta_tricolor,X),L).
-  uncaught exception: error(existence_error(procedure,behavior/2),setof/3)
+  L = [stalking]
+  
+  yes
   | ?-
-  Test 'behavior(egretta_tricolor,X). single': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'behavior(egretta_tricolor,X). single': Success
 ---------------------------------------------------------------
-Running test 'behavior(X,aerialDive). single'...
+207. Running test 'behavior(X,aerialDive). single'...
   setof(X,behavior(X,aerialDive),L).
-  uncaught exception: error(existence_error(procedure,behavior/2),setof/3)
+  L = [pelecaniformes,pelecanus,pelecanus_occidentalis]
+  
+  yes
   | ?-
-  Test 'behavior(X,aerialDive). single': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'behavior(X,aerialDive). single': Incorrect output:
+          Expected bag of [pelecanus_occidentalis], but got [pelecaniformes,pelecanus,pelecanus_occidentalis]
 ---------------------------------------------------------------
-Running test 'behavior(X,stalking). multiple'...
+208. Running test 'behavior(X,stalking). multiple'...
   setof(X,behavior(X,stalking),L).
-  uncaught exception: error(existence_error(procedure,behavior/2),setof/3)
+  L = [ardea,ardea_alba,ardea_herodias,ardeidae,botaurus,botaurus_lentiginosus,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,ixobrychus,ixobrychus_exilis,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecaniformes]
+  
+  yes
   | ?-
-  Test 'behavior(X,stalking). multiple': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'behavior(X,stalking). multiple': Incorrect output:
+          Expected bag of [ardea_alba,ardea_herodias,botaurus_lentiginosus,butorides_virescens,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,ixobrychus_exilis,nyctanassa_violacea,nycticorax_nycticorax], but got [ardea,ardea_alba,ardea_herodias,ardeidae,botaurus,botaurus_lentiginosus,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,ixobrychus,ixobrychus_exilis,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecaniformes]
 ---------------------------------------------------------------
-Running test 'behavior(pelecanus,aerialDive). genus'...
-  uncaught exception: error(existence_error(procedure,behavior/2),findall/3)
+209. Running test 'behavior(pelecanus,aerialDive). genus'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'behavior(pelecanus,aerialDive). genus': Unimplemented term:
-          Expected expression to succeed.
+  Test 'behavior(pelecanus,aerialDive). genus': Success
 ---------------------------------------------------------------
-Running test 'behavior(pelecanus,surfaceDive). genus'...
-  uncaught exception: error(existence_error(procedure,behavior/2),findall/3)
+210. Running test 'behavior(pelecanus,surfaceDive). genus'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'behavior(pelecanus,surfaceDive). genus': Unimplemented term:
-          Expected expression to succeed.
+  Test 'behavior(pelecanus,surfaceDive). genus': Success
 ---------------------------------------------------------------
-Running test 'behavior(pelecaniformes,groundForager). order'...
-  uncaught exception: error(existence_error(procedure,behavior/2),findall/3)
+211. Running test 'behavior(pelecaniformes,groundForager). order'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'behavior(pelecaniformes,groundForager). order': Unimplemented term:
-          Expected expression to succeed.
+  Test 'behavior(pelecaniformes,groundForager). order': Success
 ---------------------------------------------------------------
-Running test 'behavior(pelecaniformes,X). multiple'...
+212. Running test 'behavior(pelecaniformes,X). multiple'...
   setof(X,behavior(pelecaniformes,X),L).
-  uncaught exception: error(existence_error(procedure,behavior/2),setof/3)
+  L = [aerialDive,groundForager,probing,stalking,surfaceDive]
+  
+  yes
   | ?-
-  Test 'behavior(pelecaniformes,X). multiple': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'behavior(pelecaniformes,X). multiple': Success
 ---------------------------------------------------------------
-Running test 'conservation(pelecanus_erythrorhynchos,lc). [_'...
-  uncaught exception: error(existence_error(procedure,conservation/2),findall/3)
+213. Running test 'conservation(pelecanus_erythrorhynchos,lc). true'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'conservation(pelecanus_erythrorhynchos,lc). [_': Unimplemented term:
-          Expected expression to succeed.
+  Test 'conservation(pelecanus_erythrorhynchos,lc). true': Success
 ---------------------------------------------------------------
-Running test 'conservation(egretta_rufescens,nt). [_'...
-  uncaught exception: error(existence_error(procedure,conservation/2),findall/3)
+214. Running test 'conservation(egretta_rufescens,nt). true'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'conservation(egretta_rufescens,nt). [_': Unimplemented term:
-          Expected expression to succeed.
+  Test 'conservation(egretta_rufescens,nt). true': Success
 ---------------------------------------------------------------
-Running test 'conservation(botaurus_lentiginosus,nt). false'...
-  uncaught exception: error(existence_error(procedure,conservation/2),findall/3)
+215. Running test 'conservation(botaurus_lentiginosus,nt). false'...
+  List = []
+  
+  yes
   | ?-
-  Test 'conservation(botaurus_lentiginosus,nt). false': Unimplemented term:
-          Expected expression to fail.
+  Test 'conservation(botaurus_lentiginosus,nt). false': Success
 ---------------------------------------------------------------
-Running test 'conservation(x,lc). false'...
-  uncaught exception: error(existence_error(procedure,conservation/2),findall/3)
+216. Running test 'conservation(x,lc). false'...
+  List = []
+  
+  yes
   | ?-
-  Test 'conservation(x,lc). false': Unimplemented term:
-          Expected expression to fail.
+  Test 'conservation(x,lc). false': Success
 ---------------------------------------------------------------
-Running test 'conservation(egretta_tricolor,X). single'...
+217. Running test 'conservation(egretta_tricolor,X). single'...
   setof(X,conservation(egretta_tricolor,X),L).
-  uncaught exception: error(existence_error(procedure,conservation/2),setof/3)
+  L = [lc]
+  
+  yes
   | ?-
-  Test 'conservation(egretta_tricolor,X). single': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'conservation(egretta_tricolor,X). single': Success
 ---------------------------------------------------------------
-Running test 'conservation(X,nt). single'...
+218. Running test 'conservation(X,nt). single'...
   setof(X,conservation(X,nt),L).
-  uncaught exception: error(existence_error(procedure,conservation/2),setof/3)
+  L = [ardeidae,egretta,egretta_rufescens,pelecaniformes]
+  
+  yes
   | ?-
-  Test 'conservation(X,nt). single': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'conservation(X,nt). single': Incorrect output:
+          Expected bag of [egretta_rufescens], but got [ardeidae,egretta,egretta_rufescens,pelecaniformes]
 ---------------------------------------------------------------
-Running test 'conservation(X,lc). multiple'...
+219. Running test 'conservation(X,lc). multiple'...
   setof(X,conservation(X,lc),L).
-  uncaught exception: error(existence_error(procedure,conservation/2),setof/3)
+  L = [ardea,ardea_alba,ardea_herodias,ardeidae,botaurus,botaurus_lentiginosus,bubulcus,bubulcus_ibis,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_thula,egretta_tricolor,eudocimus,eudocimus_albus,ixobrychus,ixobrychus_exilis,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecanidae,pelecanus,pelecanus_erythrorhynchos,pelecanus_occidentalis,platalea,platalea_ajaja,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
+  
+  yes
   | ?-
-  Test 'conservation(X,lc). multiple': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'conservation(X,lc). multiple': Incorrect output:
+          Expected bag of [ardea_alba,ardea_herodias,botaurus_lentiginosus,bubulcus_ibis,butorides_virescens,egretta_caerulea,egretta_thula,egretta_tricolor,eudocimus_albus,ixobrychus_exilis,nyctanassa_violacea,nycticorax_nycticorax,pelecanus_erythrorhynchos,pelecanus_occidentalis,platalea_ajaja,plegadis_chihi,plegadis_falcinellus], but got [ardea,ardea_alba,ardea_herodias,ardeidae,botaurus,botaurus_lentiginosus,bubulcus,bubulcus_ibis,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_thula,egretta_tricolor,eudocimus,eudocimus_albus,ixobrychus,ixobrychus_exilis,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecanidae,pelecanus,pelecanus_erythrorhynchos,pelecanus_occidentalis,platalea,platalea_ajaja,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
 ---------------------------------------------------------------
-Running test 'conservation(egretta,nt). genus'...
-  uncaught exception: error(existence_error(procedure,conservation/2),findall/3)
+220. Running test 'conservation(egretta,nt). genus'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'conservation(egretta,nt). genus': Unimplemented term:
-          Expected expression to succeed.
+  Test 'conservation(egretta,nt). genus': Success
 ---------------------------------------------------------------
-Running test 'conservation(egretta,lc). genus'...
-  uncaught exception: error(existence_error(procedure,conservation/2),findall/3)
+221. Running test 'conservation(egretta,lc). genus'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'conservation(egretta,lc). genus': Unimplemented term:
-          Expected expression to succeed.
+  Test 'conservation(egretta,lc). genus': Success
 ---------------------------------------------------------------
-Running test 'conservation(pelecaniformes,nt). order'...
-  uncaught exception: error(existence_error(procedure,conservation/2),findall/3)
+222. Running test 'conservation(pelecaniformes,nt). order'...
+  List = [_]
+  
+  yes
   | ?-
-  Test 'conservation(pelecaniformes,nt). order': Unimplemented term:
-          Expected expression to succeed.
+  Test 'conservation(pelecaniformes,nt). order': Success
 ---------------------------------------------------------------
-Running test 'conservation(pelecaniformes,X). multiple'...
+223. Running test 'conservation(pelecaniformes,X). multiple'...
   setof(X,conservation(pelecaniformes,X),L).
-  uncaught exception: error(existence_error(procedure,conservation/2),setof/3)
+  L = [nt]
+  
+  yes
   | ?-
-  Test 'conservation(pelecaniformes,X). multiple': Unimplemented term:
-          Expected starts-with of L = [
+  Test 'conservation(pelecaniformes,X). multiple': Incorrect output:
+          Expected bag of [lc,nt], but got [nt]
 
 
-=========================================================================
-Test                                                                   Result 
-------------                                                           ------------
-order(pelecaniformes). [_                                              Success
-order(pelecanidae). []                                                 Success
-order(X).                                                              Success
-family(pelecanidae). [_                                                Success
-family(ardeidae). [_                                                   Success
-family(threskiornithdae). [_                                           Success
-family(pelecaniformes). is an order                                    Success
-family(X).                                                             Success
-genus(botaurus). [_                                                    Success
-genus(ardea). [_                                                       Success
-genus(nycticorax). is both a genus and a species                       Success
-genus(erythrorhynchos). is a species                                   Success
-genus(X).                                                              Success
-species(occidentalis). [_                                              Success
-species(thula). [_                                                     Success
-species(nycticorax). is both a genus and a species                     Success
-species(plegadis). is a genus                                          Success
-species(X).                                                            Success
-hasParent(plegadis_falcinellus,plegadis). cspecies/genus               Incorrect output:
+CPSC 449 Prolog Assignment: Pelecaniformes version 2 (Prolog testing harness version 7).
+========================================================================================
+     Test                                                                   Result 
+     ------------                                                           ------------
+  1. order(pelecaniformes). true                                            Success
+  2. order(pelecanidae). false                                              Success
+  3. order(X).                                                              Success
+  4. family(pelecanidae). true                                              Success
+  5. family(ardeidae). true                                                 Success
+  6. family(threskiornithdae). true                                         Success
+  7. family(pelecaniformes). is an order                                    Success
+  8. family(X).                                                             Success
+  9. genus(botaurus). true                                                  Success
+ 10. genus(ardea). true                                                     Success
+ 11. genus(nycticorax). is both a genus and a species                       Success
+ 12. genus(erythrorhynchos). is a species                                   Success
+ 13. genus(X).                                                              Success
+ 14. species(occidentalis). true                                            Success
+ 15. species(thula). true                                                   Success
+ 16. species(nycticorax). is both a genus and a species                     Success
+ 17. species(plegadis). is a genus                                          Success
+ 18. species(X).                                                            Success
+ 19. hasParent(plegadis_falcinellus,plegadis). cspecies/genus               Success
+ 20. hasParent(falcinellus,plegadis). species/genus                         Success
+ 21. hasParent(nycticorax,ardeidae). genus/family                           Success
+ 22. hasParent(threskiornithdae,pelecaniformes). family/order               Success
+ 23. hasParent(falcinellus,ardeidae). species/family                        Success
+ 24. hasParent(nycticorax,pelecaniformes). genus/order                      Success
+ 25. hasParent(X,egretta).                                                  Success
+ 26. hasParent(egretta,ardeidae). genus/family                              Success
+ 27. hasParent(caerulea,X).                                                 Success
+ 28. hasParent(X,Y).                                                        Success
+ 29. hasParent2(plegadis_falcinellus,plegadis). cspecies/genus              Unimplemented term:
         Expected expression to succeed.
-hasParent(falcinellus,plegadis). species/genus                         Incorrect output:
+ 30. hasParent2(falcinellus,plegadis). species/genus                        Unimplemented term:
         Expected expression to fail.
-hasParent(nycticorax,ardeidae). genus/family                           Success
-hasParent(threskiornithdae,pelecaniformes). family/order               Success
-hasParent(plegadis_falcinellus,ardeidae). cspecies/family              Success
-hasParent(nycticorax,pelecaniformes). genus/order                      Success
-hasParent(X,egretta).                                                  Incorrect output:
-        Expected bag of [egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor], but got [caerulea,rufescens,thula,tricolor]
-hasParent(egretta,ardeidae). genus/family                              Success
-hasParent(egretta_caerulea,X).                                         Incorrect output:
+ 31. hasParent2(nycticorax,ardeidae). genus/family                          Unimplemented term:
+        Expected expression to succeed.
+ 32. hasParent2(threskiornithdae,pelecaniformes). family/order              Unimplemented term:
+        Expected expression to succeed.
+ 33. hasParent2(plegadis_falcinellus,ardeidae). cspecies/family             Unimplemented term:
+        Expected expression to fail.
+ 34. hasParent2(nycticorax,pelecaniformes). genus/order                     Unimplemented term:
+        Expected expression to fail.
+ 35. hasParent2(X,egretta).                                                 Unimplemented term:
         Expected starts-with of L = [
-hasParent(X,Y).                                                        Incorrect output:
-        Expected bag of [[ardea,ardeidae],[ardea_alba,ardea],[ardea_herodias,ardea],[ardeidae,pelecaniformes],[botaurus,ardeidae],[botaurus_lentiginosus,botaurus],[bubulcus,ardeidae],[bubulcus_ibis,bubulcus],[butorides,ardeidae],[butorides_virescens,butorides],[egretta,ardeidae],[egretta_caerulea,egretta],[egretta_rufescens,egretta],[egretta_thula,egretta],[egretta_tricolor,egretta],[eudocimus,threskiornithdae],[eudocimus_albus,eudocimus],[ixobrychus,ardeidae],[ixobrychus_exilis,ixobrychus],[nyctanassa,ardeidae],[nyctanassa_violacea,nyctanassa],[nycticorax,ardeidae],[nycticorax_nycticorax,nycticorax],[pelecanidae,pelecaniformes],[pelecanus,pelecanidae],[pelecanus_erythrorhynchos,pelecanus],[pelecanus_occidentalis,pelecanus],[platalea,threskiornithdae],[platalea_ajaja,platalea],[plegadis,threskiornithdae],[plegadis_chihi,plegadis],[plegadis_falcinellus,plegadis],[threskiornithdae,pelecaniformes]], but got [[ajaja,platalea],[alba,ardea],[albus,eudocimus],[ardea,ardeidae],[ardeidae,pelecaniformes],[botaurus,ardeidae],[bubulcus,ardeidae],[butorides,ardeidae],[caerulea,egretta],[chihi,plegadis],[egretta,ardeidae],[erythrorhynchos,pelecanus],[eudocimus,threskiornithdae],[exilis,ixobrychus],[falcinellus,plegadis],[herodias,ardea],[ibis,bubulcus],[ixobrychus,ardeidae],[lentiginosus,botaurus],[nyctanassa,ardeidae],[nycticorax,ardeidae],[nycticorax,nycticorax],[occidentalis,pelecanus],[pelecanidae,pelecaniformes],[pelecanus,pelecanidae],[platalea,threskiornithdae],[plegadis,threskiornithdae],[rufescens,egretta],[threskiornithdae,pelecaniformes],[thula,egretta],[tricolor,egretta],[violacea,nyctanassa],[virescens,butorides]]
-hasCommonName(pelecanus,pelican). order                                Success
-hasCommonName(ardea,heron). genus                                      Success
-hasCommonName(nycticorax,nightHeron). genus                            Success
-hasCommonName(nyctanassa,nightHeron). genus (also above)               Success
-hasCommonName(pelecanus_erythrorhynchos,americanWhitePelican). cspeces Success
-hasCommonName(erythrorhynchos,americanWhitePelican). raw speces        Incorrect output:
-        Expected expression to fail.
-hasCommonName(pelecanus_erythrorhynchos,brownPelican). cspeces/wrongName Success
-hasCommonName(butorides_virescens,greenHeron). cspecies                Success
-hasCommonName(nyctanassa_violacea,X). cspecies/                        Success
-hasCommonName(X,roeateSpoonbill). /commonName                          Incorrect output:
+ 36. hasParent2(egretta,ardeidae). genus/family                             Unimplemented term:
+        Expected expression to succeed.
+ 37. hasParent2(egretta_caerulea,X).                                        Unimplemented term:
         Expected starts-with of L = [
-hasCommonName(X,Y). * /*                                               Incorrect output:
+ 38. hasParent2(X,Y).                                                       Unimplemented term:
         Expected starts-with of L = [
-hasCommonName(botaurus,lentiginosus,americanBittern). [_               Success
-hasCommonName(egretta,rufescens,reddishEgret). [_                      Success
-hasCommonName(egretta,alba,reddishEgret). genus/species mismatch       Success
-hasCommonName(egretta,rufescens,snowyEgret). wrong common name         Success
-hasCommonName(nycticorax,nycticorax,blackCrownedNightHeron). [_        Success
-hasCommonName(botaurus,lentiginosus,X).                                Success
-hasCommonName(egretta,rufescens,X).                                    Success
-hasCommonName(nycticorax,nycticorax,X).                                Incorrect output:
-        Expected bag of [blackCrownedNightHeron], but got [blackCrownedNightHeron,nightHeron]
-hasCommonName(X,Y,americanBittern).                                    Success
-hasCommonName(X,Y,reddishEgret).                                       Success
-hasCommonName(X,Y,blackCrownedNightHeron).                             Success
-hasSciName(greatBlueHeron,ardea_herodias). cspeces                     Success
-hasSciName(snowyEgret,egretta_thula). cspeces                          Success
-hasSciName(snowyEgret,thula). raw speces                               Incorrect output:
-        Expected expression to fail.
-hasSciName(cattleEgret,bubulcus_ibis). cspeces                         Success
-hasSciName(cattleEgret,ibis). raw speces                               Incorrect output:
-        Expected expression to fail.
-hasSciName(ibis,eudocimus). genus                                      Success
-hasSciName(ibis,plegadis). genus (same as above)                       Success
-hasSciName(greatBlueHeron,X). cspecies/                                Incorrect output:
+ 39. hasCommonName(pelecanus,pelican). order                                Success
+ 40. hasCommonName(ardea,heron). genus                                      Success
+ 41. hasCommonName(nycticorax,nightHeron). genus                            Success
+ 42. hasCommonName(nyctanassa,nightHeron). genus (also above)               Success
+ 43. hasCommonName(pelecanus_erythrorhynchos,americanWhitePelican). cspeces Success
+ 44. hasCommonName(erythrorhynchos,americanWhitePelican). raw speces        Success
+ 45. hasCommonName(pelecanus_erythrorhynchos,brownPelican). cspeces/wrongName Success
+ 46. hasCommonName(butorides_virescens,greenHeron). cspecies                Success
+ 47. hasCommonName(nyctanassa_violacea,X). cspecies/                        Success
+ 48. hasCommonName(X,roseateSpoonbill). /commonName                         Success
+ 49. hasCommonName(botaurus,lentiginosus,americanBittern). true             Success
+ 50. hasCommonName(egretta,rufescens,reddishEgret). true                    Success
+ 51. hasCommonName(egretta,alba,reddishEgret). genus/species mismatch       Success
+ 52. hasCommonName(egretta,rufescens,snowyEgret). wrong common name         Success
+ 53. hasCommonName(nycticorax,nycticorax,blackCrownedNightHeron). true      Success
+ 54. hasCommonName(botaurus,lentiginosus,X).                                Success
+ 55. hasCommonName(egretta,rufescens,X).                                    Success
+ 56. hasCommonName(nycticorax,nycticorax,X).                                Success
+ 57. hasCommonName(X,Y,americanBittern).                                    Success
+ 58. hasCommonName(X,Y,reddishEgret).                                       Success
+ 59. hasCommonName(X,Y,blackCrownedNightHeron).                             Success
+ 60. hasSciName(greatBlueHeron,ardea_herodias). cspeces                     Success
+ 61. hasSciName(snowyEgret,egretta_thula). cspeces                          Success
+ 62. hasSciName(snowyEgret,thula). raw speces                               Success
+ 63. hasSciName(cattleEgret,bubulcus_ibis). cspeces                         Success
+ 64. hasSciName(cattleEgret,ibis). raw speces                               Success
+ 65. hasSciName(ibis,eudocimus). genus                                      Success
+ 66. hasSciName(ibis,plegadis). genus (same as above)                       Success
+ 67. hasSciName(greatBlueHeron,X). cspecies/                                Success
+ 68. hasSciName(snowyEgret,X). cspecies/                                    Success
+ 69. hasSciName(cattleEgret,X). cspecies/                                   Success
+ 70. hasSciName(X,ardea_herodias). /cspecies                                Success
+ 71. hasSciName(X,egretta_thula). /cspecies                                 Success
+ 72. hasSciName(X,bubulcus_ibis). /cspecies                                 Success
+ 73. hasCompoundName(pelecanus,occidentalis,pelecanus_occidentalis). true   Success
+ 74. hasCompoundName(egretta,tricolor,egretta_tricolor). true               Success
+ 75. hasCompoundName(plegadis,chihi,plegadis_chihi). true                   Success
+ 76. hasCompoundName(plegadis,chihi,egretta_tricolor). wrong name           Success
+ 77. hasCompoundName(pelecanus,occidentalis,X).                             Success
+ 78. hasCompoundName(egretta,tricolor,X).                                   Success
+ 79. hasCompoundName(plegadis,chihi,X).                                     Success
+ 80. hasCompoundName(X,Y,pelecanus_occidentalis).                           Incorrect output:
         Expected starts-with of L = [
-hasSciName(snowyEgret,X). cspecies/                                    Incorrect output:
+ 81. hasCompoundName(X,Y,egretta_tricolor).                                 Incorrect output:
         Expected starts-with of L = [
-hasSciName(cattleEgret,X). cspecies/                                   Incorrect output:
+ 82. hasCompoundName(X,Y,plegadis_chihi).                                   Incorrect output:
         Expected starts-with of L = [
-hasSciName(X,ardea_herodias). /cspecies                                Success
-hasSciName(X,egretta_thula). /cspecies                                 Success
-hasSciName(X,bubulcus_ibis). /cspecies                                 Success
-hasCompoundName(pelecanus,occidentalis,pelecanus_occidentalis). [_     Success
-hasCompoundName(egretta,tricolor,egretta_tricolor). [_                 Success
-hasCompoundName(plegadis,chihi,plegadis_chihi). [_                     Success
-hasCompoundName(plegadis,chihi,egretta_tricolor). wrong name           Success
-hasCompoundName(pelecanus,occidentalis,X).                             Incorrect output:
+ 83. synonym(plegadis,plegadis). equal                                      Success
+ 84. synonym(glossyIbis,plegadis_falcinellus). common/cspecies              Success
+ 85. synonym(glossyIbis,alcinellus). common/rawSpecies                      Success
+ 86. synonym(plegadis_falcinellus,glossyIbis). species/common               Success
+ 87. synonym(falcinellus,glossyIbis). rawSpecies/common                     Success
+ 88. synonym(glossyIbis,plegadis_falcinellus). common/compound              Success
+ 89. synonym(plegadis_falcinellus,glossyIbis). compound/common              Success
+ 90. synonym(bittern,ixobrychus). common/genus                              Success
+ 91. synonym(ixobrychus,botaurus). genus/genus with same common name        Success
+ 92. synonym(bittern,botaurus). common/genus (same as above)                Success
+ 93. synonym(heron,egret). both are names for egretta                       Success
+ 94. synonym(greenHeron,X). common/                                         Success
+ 95. synonym(X,greenHeron). /common                                         Success
+ 96. synonym(butorides_virescens,X). cspecies/                              Success
+ 97. synonym(X,butorides_virescens). /cspecies                              Success
+ 98. synonym(X,heron). /common that maps to 3 genera                        Success
+ 99. synonym(heron,X). /common that maps to 3 genera                        Success
+100. isaStrict(exilis,exilis). equal species                                Incorrect output:
+        Expected expression to fail.
+101. isaStrict(ardeidae,ardeidae). equal families                           Incorrect output:
+        Expected expression to succeed.
+102. isaStrict(x,x). equal but unknown                                      Incorrect output:
+        Expected expression to fail.
+103. isaStrict(ixobrychus_exilis,ixobrychus). cspecies to genus             Incorrect output:
+        Expected expression to succeed.
+104. isaStrict(ixobrychus_exilis,ardeidae). cspecies to family              Incorrect output:
+        Expected expression to succeed.
+105. isaStrict(ixobrychus_exilis,pelecaniformes). cspecies to top           Incorrect output:
+        Expected expression to succeed.
+106. isaStrict(ixobrychus_exilis,botaurus). cspecies to wrong genus         Incorrect output:
+        Expected expression to fail.
+107. isaStrict(ixobrychus_exilis,pelecanidae). cspecies to wrong family     Incorrect output:
+        Expected expression to fail.
+108. isaStrict(exilis,ixobrychus). raw species to genus                     Incorrect output:
+        Expected expression to fail.
+109. isaStrict(ixobrychus_exilis,X).                                        Incorrect output:
         Expected starts-with of L = [
-hasCompoundName(egretta,tricolor,X).                                   Incorrect output:
+110. isa(exilis,exilis). equal raw species                                  Incorrect output:
+        Expected expression to fail.
+111. isa(ardeidae,ardeidae). equal families                                 Incorrect output:
+        Expected expression to succeed.
+112. isa(x,x). equal but unknown name                                       Incorrect output:
+        Expected expression to fail.
+113. isa(ixobrychus_exilis,ixobrychus). cspecies to genus                   Incorrect output:
+        Expected expression to succeed.
+114. isa(ixobrychus_exilis,ardeidae). cspecies to family                    Incorrect output:
+        Expected expression to succeed.
+115. isa(ixobrychus_exilis,pelecaniformes). cspecies to top                 Incorrect output:
+        Expected expression to succeed.
+116. isa(ixobrychus_exilis,botaurus). cspecies to wrong genus               Incorrect output:
+        Expected expression to fail.
+117. isa(ixobrychus_exilis,pelecanidae). cspecies to wrong family           Incorrect output:
+        Expected expression to fail.
+118. isa(exilis,ixobrychus). raw species to genus                           Incorrect output:
+        Expected expression to fail.
+119. isa(ixobrychus_exilis,X).                                              Incorrect output:
         Expected starts-with of L = [
-hasCompoundName(plegadis,chihi,X).                                     Incorrect output:
+120. isa(X,pelecanidae).                                                    Incorrect output:
         Expected starts-with of L = [
-hasCompoundName(X,Y,pelecanus_occidentalis).                           Success
-hasCompoundName(X,Y,egretta_tricolor).                                 Success
-hasCompoundName(X,Y,plegadis_chihi).                                   Success
-synonym(plegadis,plegadis). equal                                      Unimplemented term:
+121. isa(plegadis,ibis). equal genera/common                                Incorrect output:
+        Expected expression to succeed.
+122. isa(plegadis_chihi,ibis). equal cspecies/common                        Incorrect output:
+        Expected expression to succeed.
+123. isa(cattleEgret,cattleEgret). equal common/common                      Incorrect output:
+        Expected expression to succeed.
+124. isa(chihi,ibis). equal rawSpecies/common                               Incorrect output:
         Expected expression to fail.
-synonym(glossyIbis,plegadis_falcinellus). common/cspecies              Unimplemented term:
+125. isa(platalea_ajaja,pelecaniformes). bottom to top                      Incorrect output:
         Expected expression to succeed.
-synonym(glossyIbis,alcinellus). common/rawSpecies                      Unimplemented term:
+126. isa(cattleEgret,bubulcus_ibis). equal commonName to compound species   Incorrect output:
+        Expected expression to succeed.
+127. isa(whiteIbis,eudocimus). common species name to genus                 Incorrect output:
+        Expected expression to succeed.
+128. isa(leastBittern,ardeidae). common species name to family              Incorrect output:
+        Expected expression to succeed.
+129. isa(leastBittern,bittern). common species name to common family        Incorrect output:
+        Expected expression to succeed.
+130. isa(whiteFacedIbis,chihi). common species name to species alone        Incorrect output:
         Expected expression to fail.
-synonym(plegadis_falcinellus,glossyIbis). species/common               Unimplemented term:
+131. isa(plegadis_falcinellus,threskiornithdae). compound species name to family Incorrect output:
         Expected expression to succeed.
-synonym(falcinellus,glossyIbis). rawSpecies/common                     Unimplemented term:
+132. isa(nyctanassa,nightHeron). genus to genus common name                 Incorrect output:
+        Expected expression to succeed.
+133. isa(nyctanassa,egret). genus to wrong genus common name                Incorrect output:
         Expected expression to fail.
-synonym(glossyIbis,plegadis_falcinellus). common/compound              Unimplemented term:
+134. isa(nyctanassa_violacea,nightHeron). cspecies to genus common name     Incorrect output:
         Expected expression to succeed.
-synonym(plegadis_falcinellus,glossyIbis). compound/common              Unimplemented term:
-        Expected expression to succeed.
-synonym(bittern,ixobrychus). common/genus                              Unimplemented term:
-        Expected expression to succeed.
-synonym(ixobrychus,botaurus). genus/genus with same common name        Unimplemented term:
+135. isa(nyctanassa_violacea,egret). cspecies to wrong genus common name    Incorrect output:
         Expected expression to fail.
-synonym(bittern,botaurus). common/genus (same as above)                Unimplemented term:
-        Expected expression to succeed.
-synonym(heron,egrit). both are names for egretta                       Unimplemented term:
-        Expected expression to fail.
-synonym(greenHeron,X). common/                                         Unimplemented term:
-        Expected starts-with of L = [
-synonym(X,greenHeron). /common                                         Unimplemented term:
-        Expected starts-with of L = [
-synonym(butorides_virescens,X). cspecies/                              Unimplemented term:
-        Expected starts-with of L = [
-synonym(X,butorides_virescens). /cspecies                              Unimplemented term:
-        Expected starts-with of L = [
-synonym(X,heron). /common that maps to 3 genera                        Unimplemented term:
-        Expected starts-with of L = [
-synonym(heron,X). /common that maps to 3 genera                        Unimplemented term:
-        Expected starts-with of L = [
-isaStrict(exilis,exilis). equal species                                Incorrect output:
-        Expected expression to succeed.
-isaStrict(ardeidae,ardeidae). equal families                           Success
-isaStrict(x,x). equal but unknown                                      Incorrect output:
-        Expected expression to succeed.
-isaStrict(ixobrychus_exilis,ixobrychus). cspecies to genus             Success
-isaStrict(ixobrychus_exilis,ardeidae). cspecies to family              Success
-isaStrict(ixobrychus_exilis,pelecaniformes). cspecies to top           Success
-isaStrict(ixobrychus_exilis,botaurus). cspecies to wrong genus         Success
-isaStrict(ixobrychus_exilis,pelecanidae). cspecies to wrong family     Success
-isaStrict(exilis,ixobrychus). raw species to genus                     Success
-isaStrict(ixobrychus_exilis,X).                                        Success
-isa(exilis,exilis). equal raw species                                  Unimplemented term:
-        Expected expression to fail.
-isa(ardeidae,ardeidae). equal families                                 Unimplemented term:
-        Expected expression to succeed.
-isa(x,x). equal but unknown name                                       Unimplemented term:
-        Expected expression to fail.
-isa(ixobrychus_exilis,ixobrychus). cspecies to genus                   Unimplemented term:
-        Expected expression to succeed.
-isa(ixobrychus_exilis,ardeidae). cspecies to family                    Unimplemented term:
-        Expected expression to succeed.
-isa(ixobrychus_exilis,pelecaniformes). cspecies to top                 Unimplemented term:
-        Expected expression to succeed.
-isa(ixobrychus_exilis,botaurus). cspecies to wrong genus               Unimplemented term:
-        Expected expression to fail.
-isa(ixobrychus_exilis,pelecanidae). cspecies to wrong family           Unimplemented term:
-        Expected expression to fail.
-isa(exilis,ixobrychus). raw species to genus                           Unimplemented term:
-        Expected expression to fail.
-isa(ixobrychus_exilis,X).                                              Unimplemented term:
-        Expected starts-with of L = [
-isa(X,pelecanidae).                                                    Unimplemented term:
-        Expected starts-with of L = [
-isa(plegadis,ibis). equal genera/common                                Unimplemented term:
-        Expected expression to succeed.
-isa(plegadis_chihi,ibis). equal cspecies/common                        Unimplemented term:
-        Expected expression to succeed.
-isa(cattleEgret,cattleEgret). equal common/common                      Unimplemented term:
-        Expected expression to succeed.
-isa(chihi,ibis). equal rawSpecies/common                               Unimplemented term:
-        Expected expression to fail.
-isa(platalea_ajaja,pelecaniformes). bottom to top                      Unimplemented term:
-        Expected expression to succeed.
-isa(cattleEgret,bubulcus_ibis). equal commonName to compound species   Unimplemented term:
-        Expected expression to succeed.
-isa(whiteIbis,eudocimus). common species name to genus                 Unimplemented term:
-        Expected expression to succeed.
-isa(leastBittern,ardeidae). common species name to family              Unimplemented term:
-        Expected expression to succeed.
-isa(leastBittern,bittern). common species name to common family        Unimplemented term:
-        Expected expression to succeed.
-isa(whiteFacedIbis,chihi). common species name to species alone        Unimplemented term:
-        Expected expression to fail.
-isa(plegadis_falcinellus,threskiornithdae). compound species name to family Unimplemented term:
-        Expected expression to succeed.
-isa(nyctanassa,nightHeron). genus to genus common name                 Unimplemented term:
-        Expected expression to succeed.
-isa(nyctanassa,egret). genus to wrong genus common name                Unimplemented term:
-        Expected expression to fail.
-isa(nyctanassa_violacea,nightHeron). cspecies to genus common name     Unimplemented term:
-        Expected expression to succeed.
-isa(nyctanassa_violacea,egret). cspecies to wrong genus common name    Unimplemented term:
-        Expected expression to fail.
-isa(x,X). unknown/                                                     Incorrect output:
-        Expected list starting with 'L = [' and ending with ']', but got 'uncaught exception: error(existence_error(procedure,isa/2),setof/3)
+136. isa(x,X). unknown/                                                     Incorrect output:
+        Expected list starting with 'L = [' and ending with ']', but got 'uncaught exception: error(instantiation_error,atom_concat/3)
 | ?-'.
-isa(ardea_herodias,X). species                                         Unimplemented term:
+137. isa(ardea_herodias,X). species                                         Incorrect output:
         Expected starts-with of L = [
-isa(greatBlueHeron,X). common species                                  Unimplemented term:
+138. isa(greatBlueHeron,X). common species                                  Incorrect output:
         Expected starts-with of L = [
-isa(ixobrychus_exilis,X). compound species                             Unimplemented term:
+139. isa(ixobrychus_exilis,X). compound species                             Incorrect output:
         Expected starts-with of L = [
-isa(butorides,X). genus                                                Unimplemented term:
+140. isa(butorides,X). genus                                                Incorrect output:
         Expected starts-with of L = [
-isa(X,ardeidae). family                                                Unimplemented term:
+141. isa(X,ardeidae). family                                                Incorrect output:
         Expected starts-with of L = [
-isa(X,eudocimus_albus). compound species                               Unimplemented term:
+142. isa(X,eudocimus_albus). compound species                               Incorrect output:
         Expected starts-with of L = [
-isa(X,bittern). common species (multi)                                 Unimplemented term:
+143. isa(X,bittern). common species (multi)                                 Incorrect output:
         Expected starts-with of L = [
-countSpecies(botaurus_lentiginosus,1). species                         Unimplemented term:
+144. countSpecies(botaurus_lentiginosus,1). species                         Unimplemented term:
         Expected expression to succeed.
-countSpecies(botaurus,1). single-species genus                         Unimplemented term:
+145. countSpecies(botaurus,1). single-species genus                         Unimplemented term:
         Expected expression to succeed.
-countSpecies(egretta,4). 4-species genus                               Unimplemented term:
+146. countSpecies(egretta,4). 4-species genus                               Unimplemented term:
         Expected expression to succeed.
-countSpecies(ardeidae,12). 12-species family                           Unimplemented term:
+147. countSpecies(ardeidae,12). 12-species family                           Unimplemented term:
         Expected expression to succeed.
-countSpecies(pelecaniformes,18). 18-species order                      Unimplemented term:
+148. countSpecies(pelecaniformes,18). 18-species order                      Unimplemented term:
         Expected expression to succeed.
-countSpecies(x,0). 0-species unknown name                              Unimplemented term:
+149. countSpecies(x,0). 0-species unknown name                              Unimplemented term:
         Expected expression to succeed.
-countSpecies(botaurus_lentiginosus,X). species                         Unimplemented term:
+150. countSpecies(botaurus_lentiginosus,X). species                         Unimplemented term:
         Expected starts-with of L = [
-countSpecies(botaurus,X). single-species genus                         Unimplemented term:
+151. countSpecies(botaurus,X). single-species genus                         Unimplemented term:
         Expected starts-with of L = [
-countSpecies(egretta,X). 4-species genus                               Unimplemented term:
+152. countSpecies(egretta,X). 4-species genus                               Unimplemented term:
         Expected starts-with of L = [
-countSpecies(ardeidae,X). 12-species family                            Unimplemented term:
+153. countSpecies(ardeidae,X). 12-species family                            Unimplemented term:
         Expected starts-with of L = [
-countSpecies(pelecaniformes,X). 18-species order                       Unimplemented term:
+154. countSpecies(pelecaniformes,X). 18-species order                       Unimplemented term:
         Expected starts-with of L = [
-countSpecies(x,X). 0-species unknown name                              Unimplemented term:
+155. countSpecies(x,X). 0-species unknown name                              Unimplemented term:
         Expected starts-with of L = [
-rangesTo(botaurus_lentiginosus,alberta). simple species                Unimplemented term:
-        Expected expression to succeed.
-rangesTo(botaurus_lentiginosus,canada). species, inferred location     Unimplemented term:
-        Expected expression to succeed.
-rangesTo(pelecanus,alberta). simple genus                              Unimplemented term:
-        Expected expression to succeed.
-rangesTo(pelecanus,canada). genus, inferred location                   Unimplemented term:
-        Expected expression to succeed.
-rangesTo(pelecanidae,canada). order, inferred location                 Unimplemented term:
-        Expected expression to succeed.
-rangesTo(ardea_alba,alberta). speces, wrong location                   Unimplemented term:
-        Expected expression to fail.
-rangesTo(platalea_ajaja,canada). speces, wrong location                Unimplemented term:
-        Expected expression to fail.
-rangesTo(botaurus_lentiginosus,X). species, inferred location          Unimplemented term:
+156. rangesTo(botaurus_lentiginosus,alberta). simple species                Success
+157. rangesTo(botaurus_lentiginosus,canada). species, inferred location     Success
+158. rangesTo(pelecanus,alberta). simple genus                              Success
+159. rangesTo(pelecanus,canada). genus, inferred location                   Success
+160. rangesTo(pelecanidae,canada). order, inferred location                 Success
+161. rangesTo(ardea_alba,alberta). speces, wrong location                   Success
+162. rangesTo(platalea_ajaja,canada). speces, wrong location                Success
+163. rangesTo(botaurus_lentiginosus,X). species, inferred location          Success
+164. rangesTo(pelecanus,X). simple genus                                    Success
+165. rangesTo(pelecanus,X). genus, inferred location                        Success
+166. rangesTo(pelecanidae,X). order, inferred location                      Success
+167. rangesTo(ardea_alba,alberta). speces, wrong location                   Success
+168. rangesTo(platalea_ajaja,canada). speces, wrong location                Success
+169. rangesTo(X,alberta). /alberta                                          Incorrect output:
         Expected starts-with of L = [
-rangesTo(pelecanus,X). simple genus                                    Unimplemented term:
+170. rangesTo(X,canada). /canada                                            Incorrect output:
         Expected starts-with of L = [
-rangesTo(pelecanus,X). genus, inferred location                        Unimplemented term:
+171. rangesTo(X,Y). * / *                                                   Incorrect output:
         Expected starts-with of L = [
-rangesTo(pelecanidae,X). order, inferred location                      Unimplemented term:
-        Expected starts-with of L = [
-rangesTo(ardea_alba,alberta). speces, wrong location                   Incorrect output:
-        Expected list starting with 'L = [' and ending with ']', but got 'uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
-| ?-'.
-rangesTo(platalea_ajaja,canada). speces, wrong location                Incorrect output:
-        Expected list starting with 'L = [' and ending with ']', but got 'uncaught exception: error(existence_error(procedure,rangesTo/2),setof/3)
-| ?-'.
-rangesTo(X,alberta). /alberta                                          Unimplemented term:
-        Expected starts-with of L = [
-rangesTo(X,canada). /canada                                            Unimplemented term:
-        Expected starts-with of L = [
-rangesTo(X,Y). * / *                                                   Unimplemented term:
-        Expected starts-with of L = [
-habitat(pelecanus_erythrorhynchos,lakePond). [_                        Unimplemented term:
-        Expected expression to succeed.
-habitat(botaurus_lentiginosus,marsh). [_                               Unimplemented term:
-        Expected expression to succeed.
-habitat(botaurus_lentiginosus,ocean). false                            Unimplemented term:
-        Expected expression to fail.
-habitat(x,ocean). false                                                Unimplemented term:
-        Expected expression to fail.
-habitat(egretta_tricolor,X). single                                    Unimplemented term:
-        Expected starts-with of L = [
-habitat(X,ocean). single                                               Unimplemented term:
-        Expected starts-with of L = [
-habitat(X,marsh). multiple                                             Unimplemented term:
-        Expected starts-with of L = [
-habitat(pelecanus,ocean). genus                                        Unimplemented term:
-        Expected expression to succeed.
-habitat(pelecaniformes,ocean). order                                   Unimplemented term:
-        Expected expression to succeed.
-habitat(pelecaniformes,X). multiple                                    Unimplemented term:
-        Expected starts-with of L = [
-food(pelecanus_erythrorhynchos,fish). [_                               Unimplemented term:
-        Expected expression to succeed.
-food(bubulcus_ibis,insects). [_                                        Unimplemented term:
-        Expected expression to succeed.
-food(botaurus_lentiginosus,insects). false                             Unimplemented term:
-        Expected expression to fail.
-food(x,fish). false                                                    Unimplemented term:
-        Expected expression to fail.
-food(egretta_tricolor,X). single                                       Unimplemented term:
-        Expected starts-with of L = [
-food(X,insects). single                                                Unimplemented term:
-        Expected starts-with of L = [
-food(pelecanus,fish). genus                                            Unimplemented term:
-        Expected expression to succeed.
-food(pelecaniformes,insects). order                                    Unimplemented term:
-        Expected expression to succeed.
-food(pelecaniformes,X). multiple                                       Unimplemented term:
-        Expected starts-with of L = [
-nesting(pelecanus_erythrorhynchos,ground). [_                          Unimplemented term:
-        Expected expression to succeed.
-nesting(egretta_tricolor,tree). [_                                     Unimplemented term:
-        Expected expression to succeed.
-nesting(botaurus_lentiginosus,tree). false                             Unimplemented term:
-        Expected expression to fail.
-nesting(x,tree). false                                                 Unimplemented term:
-        Expected expression to fail.
-nesting(egretta_tricolor,X). single                                    Unimplemented term:
-        Expected starts-with of L = [
-nesting(X,ground). multi                                               Unimplemented term:
-        Expected starts-with of L = [
-nesting(X,tree). multi                                                 Unimplemented term:
-        Expected starts-with of L = [
-nesting(pelecanus,ground). genus                                       Unimplemented term:
-        Expected expression to succeed.
-nesting(pelecanus,tree). genus                                         Unimplemented term:
-        Expected expression to succeed.
-nesting(pelecaniformes,tree). order                                    Unimplemented term:
-        Expected expression to succeed.
-nesting(pelecaniformes,X). multiple                                    Unimplemented term:
-        Expected starts-with of L = [
-behavior(pelecanus_erythrorhynchos,surfaceDive). [_                    Unimplemented term:
-        Expected expression to succeed.
-behavior(botaurus_lentiginosus,stalking). [_                           Unimplemented term:
-        Expected expression to succeed.
-behavior(botaurus_lentiginosus,aerialDive). false                      Unimplemented term:
-        Expected expression to fail.
-behavior(x,stalking). false                                            Unimplemented term:
-        Expected expression to fail.
-behavior(egretta_tricolor,X). single                                   Unimplemented term:
-        Expected starts-with of L = [
-behavior(X,aerialDive). single                                         Unimplemented term:
-        Expected starts-with of L = [
-behavior(X,stalking). multiple                                         Unimplemented term:
-        Expected starts-with of L = [
-behavior(pelecanus,aerialDive). genus                                  Unimplemented term:
-        Expected expression to succeed.
-behavior(pelecanus,surfaceDive). genus                                 Unimplemented term:
-        Expected expression to succeed.
-behavior(pelecaniformes,groundForager). order                          Unimplemented term:
-        Expected expression to succeed.
-behavior(pelecaniformes,X). multiple                                   Unimplemented term:
-        Expected starts-with of L = [
-conservation(pelecanus_erythrorhynchos,lc). [_                         Unimplemented term:
-        Expected expression to succeed.
-conservation(egretta_rufescens,nt). [_                                 Unimplemented term:
-        Expected expression to succeed.
-conservation(botaurus_lentiginosus,nt). false                          Unimplemented term:
-        Expected expression to fail.
-conservation(x,lc). false                                              Unimplemented term:
-        Expected expression to fail.
-conservation(egretta_tricolor,X). single                               Unimplemented term:
-        Expected starts-with of L = [
-conservation(X,nt). single                                             Unimplemented term:
-        Expected starts-with of L = [
-conservation(X,lc). multiple                                           Unimplemented term:
-        Expected starts-with of L = [
-conservation(egretta,nt). genus                                        Unimplemented term:
-        Expected expression to succeed.
-conservation(egretta,lc). genus                                        Unimplemented term:
-        Expected expression to succeed.
-conservation(pelecaniformes,nt). order                                 Unimplemented term:
-        Expected expression to succeed.
-conservation(pelecaniformes,X). multiple                               Unimplemented term:
-        Expected starts-with of L = [
+172. habitat(pelecanus_erythrorhynchos,lakePond). true                      Success
+173. habitat(botaurus_lentiginosus,marsh). true                             Success
+174. habitat(botaurus_lentiginosus,ocean). false                            Success
+175. habitat(x,ocean). false                                                Success
+176. habitat(egretta_tricolor,X). single                                    Success
+177. habitat(X,ocean). single                                               Incorrect output:
+        Expected bag of [pelecanus_occidentalis], but got [pelecanidae,pelecaniformes,pelecanus,pelecanus_occidentalis]
+178. habitat(X,marsh). multiple                                             Incorrect output:
+        Expected bag of [ardea_alba,ardea_herodias,botaurus_lentiginosus,bubulcus_ibis,butorides_virescens,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,eudocimus_albus,ixobrychus_exilis,nyctanassa_violacea,nycticorax_nycticorax,platalea_ajaja,plegadis_chihi,plegadis_falcinellus], but got [ardea,ardea_alba,ardea_herodias,ardeidae,botaurus_lentiginosus,bubulcus,bubulcus_ibis,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,eudocimus,eudocimus_albus,ixobrychus,ixobrychus_exilis,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecaniformes,platalea,platalea_ajaja,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
+179. habitat(pelecanus,ocean). genus                                        Success
+180. habitat(pelecaniformes,ocean). order                                   Success
+181. habitat(pelecaniformes,X). multiple                                    Success
+182. food(pelecanus_erythrorhynchos,fish). true                             Success
+183. food(bubulcus_ibis,insects). true                                      Success
+184. food(botaurus_lentiginosus,insects). false                             Success
+185. food(x,fish). false                                                    Success
+186. food(egretta_tricolor,X). single                                       Success
+187. food(X,insects). single                                                Incorrect output:
+        Expected bag of [bubulcus_ibis,eudocimus_albus,nyctanassa_violacea,plegadis_chihi,plegadis_falcinellus], but got [ardeidae,bubulcus,bubulcus_ibis,eudocimus,eudocimus_albus,nyctanassa,nyctanassa_violacea,pelecaniformes,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
+188. food(pelecanus,fish). genus                                            Success
+189. food(pelecaniformes,insects). order                                    Success
+190. food(pelecaniformes,X). multiple                                       Success
+191. nesting(pelecanus_erythrorhynchos,ground). true                        Success
+192. nesting(egretta_tricolor,tree). true                                   Success
+193. nesting(botaurus_lentiginosus,tree). false                             Success
+194. nesting(x,tree). false                                                 Success
+195. nesting(egretta_tricolor,X). single                                    Success
+196. nesting(X,ground). multi                                               Incorrect output:
+        Expected bag of [botaurus_lentiginosus,ixobrychus_exilis,pelecanus_erythrorhynchos,plegadis_chihi,plegadis_falcinellus], but got [ardeidae,botaurus,botaurus_lentiginosus,ixobrychus,ixobrychus_exilis,pelecanidae,pelecaniformes,pelecanus,pelecanus_erythrorhynchos,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
+197. nesting(X,tree). multi                                                 Incorrect output:
+        Expected bag of [ardea_alba,ardea_herodias,bubulcus_ibis,butorides_virescens,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,eudocimus_albus,nyctanassa_violacea,nycticorax_nycticorax,pelecanus_occidentalis,platalea_ajaja], but got [ardea,ardea_alba,ardea_herodias,ardeidae,bubulcus,bubulcus_ibis,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,eudocimus,eudocimus_albus,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecanidae,pelecaniformes,pelecanus,pelecanus_occidentalis,platalea,platalea_ajaja,threskiornithdae]
+198. nesting(pelecanus,ground). genus                                       Success
+199. nesting(pelecanus,tree). genus                                         Success
+200. nesting(pelecaniformes,tree). order                                    Success
+201. nesting(pelecaniformes,X). multiple                                    Success
+202. behavior(pelecanus_erythrorhynchos,surfaceDive). true                  Success
+203. behavior(botaurus_lentiginosus,stalking). true                         Success
+204. behavior(botaurus_lentiginosus,aerialDive). false                      Success
+205. behavior(x,stalking). false                                            Success
+206. behavior(egretta_tricolor,X). single                                   Success
+207. behavior(X,aerialDive). single                                         Incorrect output:
+        Expected bag of [pelecanus_occidentalis], but got [pelecaniformes,pelecanus,pelecanus_occidentalis]
+208. behavior(X,stalking). multiple                                         Incorrect output:
+        Expected bag of [ardea_alba,ardea_herodias,botaurus_lentiginosus,butorides_virescens,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,ixobrychus_exilis,nyctanassa_violacea,nycticorax_nycticorax], but got [ardea,ardea_alba,ardea_herodias,ardeidae,botaurus,botaurus_lentiginosus,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_rufescens,egretta_thula,egretta_tricolor,ixobrychus,ixobrychus_exilis,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecaniformes]
+209. behavior(pelecanus,aerialDive). genus                                  Success
+210. behavior(pelecanus,surfaceDive). genus                                 Success
+211. behavior(pelecaniformes,groundForager). order                          Success
+212. behavior(pelecaniformes,X). multiple                                   Success
+213. conservation(pelecanus_erythrorhynchos,lc). true                       Success
+214. conservation(egretta_rufescens,nt). true                               Success
+215. conservation(botaurus_lentiginosus,nt). false                          Success
+216. conservation(x,lc). false                                              Success
+217. conservation(egretta_tricolor,X). single                               Success
+218. conservation(X,nt). single                                             Incorrect output:
+        Expected bag of [egretta_rufescens], but got [ardeidae,egretta,egretta_rufescens,pelecaniformes]
+219. conservation(X,lc). multiple                                           Incorrect output:
+        Expected bag of [ardea_alba,ardea_herodias,botaurus_lentiginosus,bubulcus_ibis,butorides_virescens,egretta_caerulea,egretta_thula,egretta_tricolor,eudocimus_albus,ixobrychus_exilis,nyctanassa_violacea,nycticorax_nycticorax,pelecanus_erythrorhynchos,pelecanus_occidentalis,platalea_ajaja,plegadis_chihi,plegadis_falcinellus], but got [ardea,ardea_alba,ardea_herodias,ardeidae,botaurus,botaurus_lentiginosus,bubulcus,bubulcus_ibis,butorides,butorides_virescens,egretta,egretta_caerulea,egretta_thula,egretta_tricolor,eudocimus,eudocimus_albus,ixobrychus,ixobrychus_exilis,nyctanassa,nyctanassa_violacea,nycticorax,nycticorax_nycticorax,pelecanidae,pelecanus,pelecanus_erythrorhynchos,pelecanus_occidentalis,platalea,platalea_ajaja,plegadis,plegadis_chihi,plegadis_falcinellus,threskiornithdae]
+220. conservation(egretta,nt). genus                                        Success
+221. conservation(egretta,lc). genus                                        Success
+222. conservation(pelecaniformes,nt). order                                 Success
+223. conservation(pelecaniformes,X). multiple                               Incorrect output:
+        Expected bag of [lc,nt], but got [nt]
 
 Summary:
- 64 Success                                 
- 22 Incorrect output                        
-128 Unimplemented term                      
+141 Success                                 
+ 60 Incorrect output                        
+ 22 Unimplemented term                      
 ---
-214     Total Tests (version 5)
+223     Total Tests (version 2)
   0/0   Strict Tests Passed
- 64/214 Non-Strict Tests Passed
+141/223 Non-Strict Tests Passed
