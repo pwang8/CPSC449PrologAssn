@@ -73,6 +73,10 @@ hasParent(pelecanidae, pelecaniformes).
 hasParent(ardeidae, pelecaniformes).
 hasParent(threskiornithdae, pelecaniformes).
 
+hasParent2(A,B) :- hasCompoundName(_,S,A), genus(B), hasParent(S,B).
+hasParent2(A,B) :- genus(A), family(B), hasParent(A,B).
+hasParent2(A,B) :- family(A), order(B), hasParent(A,B).
+
 hasCommonName(pelecanus,pelican).
 hasCommonName(pelecanus_erythrorhynchos,americanWhitePelican).
 hasCommonName(pelecanus_occidentalis,brownPelican).	
@@ -378,3 +382,4 @@ conservation(ardeidae, lc).
 conservation(ardeidae, nt).
 conservation(threskiornithdae, lc).
 conservation(pelecaniformes, nt).
+conservation(pelecaniformes, lc).
