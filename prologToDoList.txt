@@ -1,6 +1,6 @@
 (Fixed) -hasCompoundName, atom_concat/3 instantiation error in cases 77 to 79.
 (Fixed)  -hasParent2/2 is unable to take in variables.
--isa/2 can't take in a variable in either slot because it will return common names in the list(which should not happen, only tax names).
+(Fixed) -isa/2 can't take in a variable in either slot because it will return common names in the list(which should not happen, only tax names).
     -currently has an issue where isa infinitely loops, messes up the next few tests on the test program.
 (Fixed) -issue with countSpecies, always returns a 0 in the list. Ie: countSpecies(pelecaniformes,X),
     should return 18, but instead it returns [18,0].
