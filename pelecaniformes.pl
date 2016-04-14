@@ -154,7 +154,6 @@ range(pelecanus_erythrorhynchos, canada).
 range(pelecanus_erythrorhynchos, alberta).
 range(botaurus_lentiginosus, canada).
 range(botaurus_lentiginosus, alberta).
-range(ixobrychus_exilis, canada).
 range(ardea_herodias, canada).
 range(ardea_herodias, alberta).
 range(ardea_alba, canada).
