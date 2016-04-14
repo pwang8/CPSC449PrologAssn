@@ -116,27 +116,21 @@ hasCommonName(G, S, C) :- 	hasParent(S,G),
 
 hasSciName(C, N) :- hasCommonName(N, C).
 
-hasCompoundName(G,S,N) :- 	atom_concat(X, S, N),
-    						atom_concat(G, '_', X),
-    						genus(G), species(S), hasParent(S,G).
+hasCompoundName(G,S,N) :- 	genus(G), species(S), hasParent(S,G),
+    						atom_concat(G, '_', X), atom_concat(X, S, N).
 
 isaStrict(A, A) :- 	order(A);
     				family(A);
     				genus(A);
     				hasCompoundName(_,_,A).
-isaStrict(A, B) :-  hasParent(A,B), \+(species(A));
-					hasParent(A,X), isaStrict(X,B), \+(species(A)).
-isaStrict(A, B) :-  hasCompoundName(_,S,A), hasParent(S,B);
-    				hasCompoundName(G,_,A), isaStrict(G,B).
+isaStrict(A, B) :-  hasParent2(A,B);
+					(hasParent2(A,X), isaStrict(X,B)).
 
-isa(A,B) :-	hasCommonName(N,A), hasCommonName(M,B),
+isa(A,B) :-	(nonvar(A), nonvar(B)) -> hasCommonName(N,A), hasCommonName(M,B),
     		isaStrict(N,M).
-isa(A,B) :- hasCommonName(N,A), \+(hasCommonName(_,B)),
-    		isaStrict(N,B).
-isa(A,B) :- \+(hasCommonName(_,A)), hasCommonName(M,B),
-    		isaStrict(A,M).
-isa(A,B) :- \+(hasCommonName(_,A)), \+(hasCommonName(_,B)),
-    		isaStrict(A,B).
+isa(A,B) :- nonvar(A) -> hasCommonName(N,A), isaStrict(N,B).
+isa(A,B) :- nonvar(B) -> hasCommonName(M,B), isaStrict(A,M).
+isa(A,B) :- isaStrict(A,B).
     		
 
 synonym(A,B) :- hasCommonName(B,A), hasCommonName(B,_), A\=B.
@@ -144,8 +138,8 @@ synonym(A,B) :- hasCommonName(A,_), hasCommonName(A,B), A\=B.
 synonym(A,B) :- hasCommonName(X,A), hasCommonName(X,B), A\=B.
 
 countSpecies(A, N) :- hasCompoundName(_,_,A), N=1.
-countSpecies(A, N) :- findall(_,speciesWithAncestor(_,A),X), sort(X,L), length(L,N).
-countSpecies(_, 0).
+countSpecies(A, N) :- \+(hasCompoundName(_,_,A)), findall(_,speciesWithAncestor(_,A),X), sort(X,L), length(L,N).
+countSpecies(A, N) :- \+(order(A)), \+(family(A)), \+(genus(A)), \+(hasCompoundName(_,_,A)), N=0.
 
 %helper predicate.
 speciesWithAncestor(A, B) :- species(A), genus(B), hasParent(A,B).
