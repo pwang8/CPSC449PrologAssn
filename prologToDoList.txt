@@ -1,7 +1,7 @@
--hasCompoundName, atom_concat/3 instantiation error in cases 77 to 79.
--hasParent2/2 is unable to take in variables.
+(Fixed) -hasCompoundName, atom_concat/3 instantiation error in cases 77 to 79.
+(Fixed)  -hasParent2/2 is unable to take in variables.
 -bunch of stuff wrong with isa/2
--issue with countSpecies, always returns a 0 in the list. Ie: countSpecies(pelecaniformes,X),
+(Fixed) -issue with countSpecies, always returns a 0 in the list. Ie: countSpecies(pelecaniformes,X),
     should return 18, but instead it returns [18,0].
 -Tests 169-171, rangesTo does not return the expected list.
 -food/2, if A is a variable, the return should only be the compound names, no order/family/genus
